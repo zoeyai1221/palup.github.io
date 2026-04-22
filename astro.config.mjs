@@ -11,5 +11,6 @@ export default defineConfig({
   })],
   image: {
     service: squooshImageService()
-  }
+  },
+  site: 'https://zoeyai1221.github.io/palup.github.io/',
 });
