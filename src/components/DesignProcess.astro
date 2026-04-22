@@ -1,4 +1,13 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+const imgMods = import.meta.glob<{ default: ImageMetadata }>(
+	'../assets/images/palup/*.{png,jpg,jpeg}',
+	{ eager: true }
+);
+const img = (name: string): ImageMetadata =>
+	(imgMods[`../assets/images/palup/${name}`] as { default: ImageMetadata }).default;
 ---
 
 <section data-testid="process" id="process" class="py-10 lg:py-14">
@@ -76,15 +85,15 @@
 		<div class="mb-6 flex justify-center">
 			<div class="grid w-full max-w-lg grid-cols-3 gap-3">
 				<figure class="flex flex-col gap-1">
-					<img src="/images/palup/paper_prototype_before_eval_create_event.jpg" alt="Paper prototype before — Create Event" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+					<Image src={img('paper_prototype_before_eval_create_event.jpg')} alt="Paper prototype before — Create Event" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy"  />
 					<figcaption class="text-center text-xs text-gray-400">Create Event</figcaption>
 				</figure>
 				<figure class="flex flex-col gap-1">
-					<img src="/images/palup/paper_prototype_before_eval_view_event_chatroom.jpg" alt="Paper prototype before — View Event & Chatroom" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+					<Image src={img('paper_prototype_before_eval_view_event_chatroom.jpg')} alt="Paper prototype before — View Event & Chatroom" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy"  />
 					<figcaption class="text-center text-xs text-gray-400">View Event &amp; Chatroom</figcaption>
 				</figure>
 				<figure class="flex flex-col gap-1">
-					<img src="/images/palup/paper_prototype_before_eval_profile.jpg" alt="Paper prototype before — Profile" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+					<Image src={img('paper_prototype_before_eval_profile.jpg')} alt="Paper prototype before — Profile" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy"  />
 					<figcaption class="text-center text-xs text-gray-400">Profile</figcaption>
 				</figure>
 			</div>
@@ -93,27 +102,27 @@
 		<p class="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">After heuristic evaluation</p>
 		<div class="grid grid-cols-3 gap-3 sm:grid-cols-6">
 			<figure class="flex flex-col gap-1">
-				<img src="/images/palup/paper_prototype_after_eval_create_event.jpg" alt="Paper prototype after — Create Event" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+				<Image src={img('paper_prototype_after_eval_create_event.jpg')} alt="Paper prototype after — Create Event" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Create Event</figcaption>
 			</figure>
 			<figure class="flex flex-col gap-1">
-				<img src="/images/palup/paper_prototype_after_eval_join_event_1.jpg" alt="Paper prototype after — Join Event 1" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+				<Image src={img('paper_prototype_after_eval_join_event_1.jpg')} alt="Paper prototype after — Join Event 1" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Join Event (1)</figcaption>
 			</figure>
 			<figure class="flex flex-col gap-1">
-				<img src="/images/palup/paper_prototype_after_eval_join_event_2.jpg" alt="Paper prototype after — Join Event 2" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+				<Image src={img('paper_prototype_after_eval_join_event_2.jpg')} alt="Paper prototype after — Join Event 2" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Join Event (2)</figcaption>
 			</figure>
 			<figure class="flex flex-col gap-1">
-				<img src="/images/palup/paper_prototype_after_eval_chatroom.png" alt="Paper prototype after — Chatroom" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+				<Image src={img('paper_prototype_after_eval_chatroom.png')} alt="Paper prototype after — Chatroom" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Chatroom</figcaption>
 			</figure>
 			<figure class="flex flex-col gap-1">
-				<img src="/images/palup/paper_prototype_after_eval_profile.png" alt="Paper prototype after — Profile" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+				<Image src={img('paper_prototype_after_eval_profile.png')} alt="Paper prototype after — Profile" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Profile</figcaption>
 			</figure>
 			<figure class="flex flex-col gap-1">
-				<img src="/images/palup/paper_prototype_after_eval_setting.png" alt="Paper prototype after — Settings" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+				<Image src={img('paper_prototype_after_eval_setting.png')} alt="Paper prototype after — Settings" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Settings</figcaption>
 			</figure>
 		</div>
@@ -148,27 +157,27 @@
 		<!-- 6 wireframe phones in one row -->
 		<div class="mb-6 grid grid-cols-3 gap-3 sm:grid-cols-6">
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/figma_wireframe_screenshot_home.png" alt="Wireframe — Home" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('figma_wireframe_screenshot_home.png')} alt="Wireframe — Home" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Home</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/figma_wireframe_screenshot_create_event_preference.png" alt="Wireframe — Create Event preferences" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('figma_wireframe_screenshot_create_event_preference.png')} alt="Wireframe — Create Event preferences" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Preferences</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/figma_wireframe_screenshot_create_event_preview.png" alt="Wireframe — Create Event preview" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('figma_wireframe_screenshot_create_event_preview.png')} alt="Wireframe — Create Event preview" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Preview</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/figma_wireframe_screenshot_create_event_posted.png" alt="Wireframe — Event posted" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('figma_wireframe_screenshot_create_event_posted.png')} alt="Wireframe — Event posted" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Posted</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/figma_wireframe_screenshot_chatroom.png" alt="Wireframe — Chatroom" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('figma_wireframe_screenshot_chatroom.png')} alt="Wireframe — Chatroom" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Chatroom</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/figma_wireframe_screenshot_login_error.png" alt="Wireframe — Login error" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('figma_wireframe_screenshot_login_error.png')} alt="Wireframe — Login error" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Login error</figcaption>
 			</figure>
 		</div>
@@ -204,11 +213,11 @@
 
 			<div class="flex justify-center gap-4 lg:w-1/2">
 				<figure data-animate="fade-up" data-delay="0" class="flex flex-col items-center gap-1">
-					<img src="/images/palup/medium_fi_create_event_preferences.png" alt="Medium-fi — Create Event preferences" class="w-[150px] rounded-2xl shadow-lg ring-1 ring-black/10 transition-transform duration-300 hover:scale-105 lg:w-[180px]" loading="lazy" />
+					<Image src={img('medium_fi_create_event_preferences.png')} alt="Medium-fi — Create Event preferences" class="w-[150px] rounded-2xl shadow-lg ring-1 ring-black/10 transition-transform duration-300 hover:scale-105 lg:w-[180px]" loading="lazy"  />
 					<figcaption class="text-center text-xs text-gray-400">Create Event — preferences</figcaption>
 				</figure>
 				<figure data-animate="fade-up" data-delay="150" class="flex flex-col items-center gap-1">
-					<img src="/images/palup/medium_fi_tappable_card.png" alt="Medium-fi — Tappable event card" class="w-[150px] rounded-2xl shadow-lg ring-1 ring-black/10 transition-transform duration-300 hover:scale-105 lg:w-[180px]" loading="lazy" />
+					<Image src={img('medium_fi_tappable_card.png')} alt="Medium-fi — Tappable event card" class="w-[150px] rounded-2xl shadow-lg ring-1 ring-black/10 transition-transform duration-300 hover:scale-105 lg:w-[180px]" loading="lazy"  />
 					<figcaption class="text-center text-xs text-gray-400">Tappable event card</figcaption>
 				</figure>
 			</div>
@@ -266,23 +275,23 @@
 		<p class="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">Home &amp; Create Event flow</p>
 		<div data-animate="fade-up" class="mb-6 grid grid-cols-5 gap-3">
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/high_fi_homescreen.png" alt="High-fi — Home" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('high_fi_homescreen.png')} alt="High-fi — Home" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Home</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/high_fi_create_event_details.png" alt="High-fi — Details" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('high_fi_create_event_details.png')} alt="High-fi — Details" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Details</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/high_fi_create_event_preference_page.png" alt="High-fi — Preferences" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('high_fi_create_event_preference_page.png')} alt="High-fi — Preferences" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Preferences</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/high_fi_create_event_preview.png" alt="High-fi — Preview" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('high_fi_create_event_preview.png')} alt="High-fi — Preview" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Preview</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/high_fi_create_event_posted.png" alt="High-fi — Posted" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('high_fi_create_event_posted.png')} alt="High-fi — Posted" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Posted</figcaption>
 			</figure>
 		</div>
@@ -291,23 +300,23 @@
 		<p class="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">Chatroom, My Events &amp; Profile</p>
 		<div data-animate="fade-up" data-delay="100" class="grid grid-cols-5 gap-3">
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/high_fi_chatroom.png" alt="High-fi — Chatroom" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('high_fi_chatroom.png')} alt="High-fi — Chatroom" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Chatroom</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/high_fi_chatroom_pinned_notice.png" alt="High-fi — Chatroom pinned notice" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('high_fi_chatroom_pinned_notice.png')} alt="High-fi — Chatroom pinned notice" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Pinned notice</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/high_fi_my_events.png" alt="High-fi — My Events" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('high_fi_my_events.png')} alt="High-fi — My Events" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">My Events</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/high_fi_profile_1.png" alt="High-fi — Profile" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('high_fi_profile_1.png')} alt="High-fi — Profile" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Profile</figcaption>
 			</figure>
 			<figure class="flex flex-col items-center gap-1">
-				<img src="/images/palup/high_fi_profile_2.png" alt="High-fi — Profile settings" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<Image src={img('high_fi_profile_2.png')} alt="High-fi — Profile settings" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy"  />
 				<figcaption class="text-center text-xs text-gray-400">Profile settings</figcaption>
 			</figure>
 		</div>

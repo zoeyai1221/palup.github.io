@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import affinityDiagram from '../assets/images/palup/affinity_diagram.png';
+import persona from '../assets/images/palup/persona.png';
 ---
 
 <section data-testid="research" id="research" class="py-10 lg:py-14">
@@ -19,8 +22,8 @@
 		<!-- Left: Affinity diagram + theme cards -->
 		<div class="flex flex-col gap-4 lg:w-1/2">
 			<figure data-animate="fade-left">
-				<img
-					src="/images/palup/affinity_diagram.png"
+				<Image
+					src={affinityDiagram}
 					alt="Affinity diagram clustering 6 major themes from interview data"
 					class="w-full rounded-2xl shadow ring-1 ring-black/5"
 					loading="lazy"
@@ -65,8 +68,8 @@
 
 		<!-- Right: Persona image only -->
 		<div data-animate="fade-right" class="lg:w-1/2">
-			<img
-				src="/images/palup/persona.png"
+			<Image
+				src={persona}
 				alt="User persona card for Angela Zhang"
 				class="w-full rounded-2xl shadow ring-1 ring-black/5"
 				loading="lazy"

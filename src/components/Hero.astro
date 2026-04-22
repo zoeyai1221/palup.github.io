@@ -1,5 +1,10 @@
 ---
 import Button from '@components/ui/Button.astro';
+import { Image } from 'astro:assets';
+import homescreen from '../assets/images/palup/high_fi_homescreen.png';
+import eventDetails from '../assets/images/palup/high_fi_create_event_details.png';
+import chatroom from '../assets/images/palup/high_fi_chatroom.png';
+import profile1 from '../assets/images/palup/high_fi_profile_1.png';
 ---
 
 <section
@@ -72,10 +77,10 @@ import Button from '@components/ui/Button.astro';
 			-->
 			<div id="hero-viewport" class="animate-float relative w-[300px] overflow-hidden lg:w-[340px]">
 				<div id="hero-track" class="flex items-center">
-					<img src="/images/palup/high_fi_homescreen.png"  alt="Home"      class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="eager" />
-					<img src="/images/palup/high_fi_create_event_details.png"   alt="Event Details" class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="lazy" />
-					<img src="/images/palup/high_fi_chatroom.png"    alt="Chatroom"  class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="lazy" />
-					<img src="/images/palup/high_fi_profile_1.png"   alt="Profile"   class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="lazy" />
+					<Image src={homescreen}    alt="Home"         class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="eager" />
+					<Image src={eventDetails} alt="Event Details" class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="lazy" />
+					<Image src={chatroom}     alt="Chatroom"      class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="lazy" />
+					<Image src={profile1}     alt="Profile"       class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="lazy" />
 				</div>
 			</div>
 
