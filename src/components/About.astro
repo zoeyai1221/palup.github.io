@@ -4,26 +4,39 @@
 <section
 	data-testid="about"
 	id="problem"
-	class="flex flex-col items-start justify-center py-20 lg:py-32"
+	class="py-20 lg:py-28"
 >
-	<h2 class="mb-2 font-monospace text-2xl text-orange lg:text-4xl">The Problem</h2>
-	<span class="mb-8 h-1 w-10 bg-orange"></span>
+	<div class="rounded-3xl bg-gray-50 p-8 dark:bg-gray-900 lg:p-14">
+		<p class="mb-3 text-xs font-bold uppercase tracking-widest text-orange">01 — The Problem</p>
+		<h2 class="mb-8 max-w-2xl font-monospace text-3xl text-black dark:text-white lg:text-5xl">
+			Moving to a new city means eating alone — a lot.
+		</h2>
 
-	<div class="max-w-2xl text-black dark:text-white">
-		<p class="mb-6 text-lg leading-relaxed">
-			Moving to a new city means eating alone — a lot. Communal dishes like hotpot and dim sum lose
-			their appeal without company. Existing platforms like Meetup handle large events, but nothing
-			exists for the simple, recurring need: finding one to three people to share a meal with.
-		</p>
+		<div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+			<div>
+				<p class="mb-6 text-base leading-loose text-gray-600 dark:text-gray-400">
+					Communal dishes like hotpot and dim sum lose their appeal without company. Existing
+					platforms like Meetup handle large events, but nothing exists for the simple, recurring
+					need: finding one to three people to share a meal with.
+				</p>
+				<p class="text-base leading-loose text-gray-600 dark:text-gray-400">
+					We set out to design a mobile app that makes it effortless to find a compatible dining
+					companion — not just someone who likes the same cuisine, but someone you can actually talk
+					to.
+				</p>
+			</div>
 
-		<blockquote
-			class="border-l-4 border-orange pl-5 py-2 text-xl font-semibold italic text-black dark:text-white"
-		>
-			"People don't want a dining companion who likes the same food. They want someone they can
-			actually talk to."
-			<span class="mt-2 block text-sm font-normal not-italic text-orange">
-				— Core insight from user research
-			</span>
-		</blockquote>
+			<div class="flex flex-col justify-center">
+				<blockquote class="border-l-4 border-orange pl-6">
+					<p class="mb-3 text-xl font-semibold italic leading-snug text-black dark:text-white lg:text-2xl">
+						"People don't want a dining companion who likes the same food. They want someone they can
+						actually talk to."
+					</p>
+					<cite class="text-sm font-bold not-italic uppercase tracking-widest text-orange">
+						Core insight from user research
+					</cite>
+				</blockquote>
+			</div>
+		</div>
 	</div>
 </section>

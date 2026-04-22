@@ -2,51 +2,55 @@
 import Button from '@components/ui/Button.astro';
 ---
 
-<section
-	data-testid="reflection"
-	id="reflection"
-	class="flex flex-col items-start justify-center py-20 lg:py-32"
->
-	<h2 class="mb-2 font-monospace text-2xl text-orange lg:text-4xl">Reflection</h2>
-	<span class="mb-10 h-1 w-10 bg-orange"></span>
+<section data-testid="reflection" id="reflection" class="py-20 lg:py-28">
 
-	<div class="mb-10 grid w-full gap-8 lg:grid-cols-3">
-		<div class="rounded-xl border border-orange/20 bg-white p-6 shadow dark:bg-black">
-			<p class="mb-3 font-bold text-orange">What worked</p>
-			<p class="text-sm text-black dark:text-white leading-relaxed">
-				Grounding design decisions in a specific, counterintuitive research finding — conversational
-				fit matters more than food preference — gave the team a clear north star. Every field label
-				and feature choice could be evaluated against that principle.
-			</p>
-		</div>
-		<div class="rounded-xl border border-orange/20 bg-white p-6 shadow dark:bg-black">
-			<p class="mb-3 font-bold text-orange">What we'd do differently</p>
-			<p class="text-sm text-black dark:text-white leading-relaxed">
-				Our participant pool skewed toward Chinese international students, limiting generalizability.
-				A more diverse sample would have surfaced different safety concerns, dining norms, and social
-				dynamics. We'd also introduce quantitative usability metrics (SUS, task completion rates)
-				earlier.
-			</p>
-		</div>
-		<div class="rounded-xl border border-orange/20 bg-white p-6 shadow dark:bg-black">
-			<p class="mb-3 font-bold text-orange">What's next</p>
-			<p class="text-sm text-black dark:text-white leading-relaxed">
-				A matching algorithm surfacing compatible companions, verified profiles to address safety
-				concerns, and an empty-state experience for newly created events with no joiners yet.
-			</p>
-		</div>
-	</div>
+	<div class="rounded-3xl bg-gray-50 p-8 dark:bg-gray-900 lg:p-14">
+		<p class="mb-3 text-xs font-bold uppercase tracking-widest text-orange">05 — Reflection</p>
+		<h2 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
+			What we learned
+		</h2>
 
-	<div class="flex w-full flex-col items-center gap-6 rounded-2xl bg-orange/5 py-14 text-center dark:bg-orange/10">
-		<p class="text-xl font-semibold text-black dark:text-white">
-			Ready to explore the full interactive prototype?
-		</p>
-		<a
-			href="https://www.figma.com/proto/GHEjNtXC88rwqjANMyj82r/PalUp?node-id=628-2444&t=9MffpE68rPn1Mh8K-1"
-			target="_blank"
-			rel="noopener"
-		>
-			<Button style={'primary'} size={'lg'} name="View Prototype">View Interactive Prototype →</Button>
-		</a>
+		<div class="mb-12 grid gap-6 lg:grid-cols-3">
+			<div class="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+				<p class="mb-3 text-xs font-bold uppercase tracking-widest text-orange">What worked</p>
+				<p class="mb-3 font-semibold text-black dark:text-white">A counterintuitive north star</p>
+				<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+					Grounding every decision in one specific, counterintuitive research finding — conversational
+					fit matters more than food preference — gave the team a shared reference point. Every field
+					label and feature could be evaluated against that single principle.
+				</p>
+			</div>
+			<div class="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+				<p class="mb-3 text-xs font-bold uppercase tracking-widest text-orange">What we'd do differently</p>
+				<p class="mb-3 font-semibold text-black dark:text-white">Broader participant pool, earlier metrics</p>
+				<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+					Our participants skewed toward Chinese international students, limiting generalizability. A
+					more diverse sample would have surfaced different safety concerns and dining norms. We'd
+					also introduce quantitative metrics (SUS, task completion rates) earlier in the process.
+				</p>
+			</div>
+			<div class="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+				<p class="mb-3 text-xs font-bold uppercase tracking-widest text-orange">What's next</p>
+				<p class="mb-3 font-semibold text-black dark:text-white">Matching, verification, empty states</p>
+				<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+					A matching algorithm surfacing compatible companions based on conversational style. Verified
+					profiles to address safety concerns. An empty-state experience for newly created events
+					with no joiners yet.
+				</p>
+			</div>
+		</div>
+
+		<div class="flex flex-col items-center gap-5 border-t border-gray-200 pt-12 text-center dark:border-gray-700">
+			<p class="font-monospace text-xl text-black dark:text-white">
+				Ready to explore the full interactive prototype?
+			</p>
+			<a
+				href="https://www.figma.com/proto/GHEjNtXC88rwqjANMyj82r/PalUp?node-id=628-2444&t=9MffpE68rPn1Mh8K-1"
+				target="_blank"
+				rel="noopener"
+			>
+				<Button style={'primary'} size={'lg'} name="View Prototype">View Interactive Prototype →</Button>
+			</a>
+		</div>
 	</div>
 </section>
