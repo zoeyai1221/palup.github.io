@@ -1,509 +1,314 @@
 ---
 ---
 
-<section data-testid="process" id="process" class="py-20 lg:py-28">
+<section data-testid="process" id="process" class="py-10 lg:py-14">
 
-	<p class="mb-3 text-xs font-bold uppercase tracking-widest text-orange">03 — Design Process</p>
-	<h2 class="mb-4 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
-		Four iterative phases
-	</h2>
-	<p class="mb-12 max-w-xl text-base leading-loose text-gray-600 dark:text-gray-400">
+	<p class="mb-2 text-xs font-bold uppercase tracking-widest text-orange">03 — Design Process</p>
+	<h2 class="mb-3 font-monospace text-2xl text-black dark:text-white lg:text-4xl">Four iterative phases</h2>
+	<p class="mb-8 max-w-xl text-sm leading-loose text-gray-600 dark:text-gray-400">
 		Each phase built directly on what we learned. Every design decision traced back to a specific
 		finding from research or evaluation.
 	</p>
 
-	<!-- Process timeline -->
-	<div class="mb-20">
-		<figure>
-			<img
-				src="/images/palup/process_timeline_diagram.png"
-				alt="Design process timeline: Research → Paper Prototype → Wireframes → Medium-Fi → High-Fi"
-				class="w-full rounded-2xl shadow ring-1 ring-black/5"
-				loading="lazy"
-			/>
-			<figcaption class="mt-3 text-center text-sm text-gray-500">
-				Full process timeline across the semester
-			</figcaption>
-		</figure>
+	<!-- Process timeline (custom diagram) -->
+	<div class="mb-10">
+		<div class="relative py-2">
+			<!-- Connector line -->
+			<div class="absolute top-[1.1rem] left-[calc(10%+1rem)] right-[calc(10%+1rem)] h-0.5 bg-gray-200 dark:bg-gray-700"></div>
+			<!-- Phase nodes -->
+			<div class="relative flex justify-between">
+				<div class="flex w-1/5 flex-col items-center">
+					<div class="z-10 flex h-9 w-9 items-center justify-center rounded-full bg-orange text-xs font-bold text-white shadow">01</div>
+					<p class="mt-2 text-center text-xs font-bold text-black dark:text-white">Research</p>
+					<p class="text-center text-xs text-gray-400">8 interviews</p>
+					<p class="text-center text-xs text-gray-400">Jan 2026</p>
+				</div>
+				<div class="flex w-1/5 flex-col items-center">
+					<div class="z-10 flex h-9 w-9 items-center justify-center rounded-full bg-orange text-xs font-bold text-white shadow">02</div>
+					<p class="mt-2 text-center text-xs font-bold text-black dark:text-white">Paper Prototype</p>
+					<p class="text-center text-xs text-gray-400">12 issues found</p>
+					<p class="text-center text-xs text-gray-400">Feb 2026</p>
+				</div>
+				<div class="flex w-1/5 flex-col items-center">
+					<div class="z-10 flex h-9 w-9 items-center justify-center rounded-full bg-orange text-xs font-bold text-white shadow">03</div>
+					<p class="mt-2 text-center text-xs font-bold text-black dark:text-white">Wireframes</p>
+					<p class="text-center text-xs text-gray-400">Low fidelity</p>
+					<p class="text-center text-xs text-gray-400">Feb 2026</p>
+				</div>
+				<div class="flex w-1/5 flex-col items-center">
+					<div class="z-10 flex h-9 w-9 items-center justify-center rounded-full bg-orange text-xs font-bold text-white shadow">04</div>
+					<p class="mt-2 text-center text-xs font-bold text-black dark:text-white">Medium-Fi</p>
+					<p class="text-center text-xs text-gray-400">User testing</p>
+					<p class="text-center text-xs text-gray-400">Mar 2026</p>
+				</div>
+				<div class="flex w-1/5 flex-col items-center">
+					<div class="z-10 flex h-9 w-9 items-center justify-center rounded-full bg-orange text-xs font-bold text-white shadow">05</div>
+					<p class="mt-2 text-center text-xs font-bold text-black dark:text-white">High-Fi</p>
+					<p class="text-center text-xs text-gray-400">Final prototype</p>
+					<p class="text-center text-xs text-gray-400">Apr 2026</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
-	<!-- ─── Phase 01: Paper Prototype ─── -->
-	<div class="mb-24">
-		<div class="mb-10 flex items-start gap-5">
-			<span class="font-monospace text-6xl font-bold leading-none text-orange opacity-20 lg:text-8xl" aria-hidden="true">01</span>
-			<div class="pt-2">
-				<p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange">Phase 01</p>
-				<h3 class="font-monospace text-2xl font-bold text-black dark:text-white lg:text-3xl">Paper Prototype</h3>
+	<!-- ─── Phase 01 ─── -->
+	<div class="mb-10">
+		<div class="mb-6 flex items-start gap-4">
+			<span class="font-monospace text-5xl font-bold leading-none text-orange opacity-20" aria-hidden="true">01</span>
+			<div class="pt-1">
+				<p class="mb-0.5 text-xs font-bold uppercase tracking-widest text-orange">Phase 01</p>
+				<h3 class="font-monospace text-xl font-bold text-black dark:text-white">Paper Prototype</h3>
 			</div>
 		</div>
 
-		<div class="mb-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
-			<div>
-				<p class="mb-5 text-base leading-loose text-gray-600 dark:text-gray-400">
-					We sketched four core task flows — managing a profile, finding and joining an event,
-					creating an event, and chatting with participants. Each team member owned one flow and we
-					produced rough paper prototypes for a cross-team heuristic evaluation.
-				</p>
-				<p class="text-base leading-loose text-gray-600 dark:text-gray-400">
-					The evaluation surfaced <strong class="text-black dark:text-white">12 issues</strong>.
-					Three were rated most severe:
-				</p>
-			</div>
-			<div class="rounded-2xl bg-gray-50 p-6 dark:bg-gray-900">
-				<p class="mb-4 text-xs font-bold uppercase tracking-widest text-orange">Severe issues found</p>
-				<ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-					<li class="flex gap-3">
-						<span class="mt-0.5 flex-shrink-0 font-bold text-orange">→</span>
-						No send button visible in the chat interface
-					</li>
-					<li class="flex gap-3">
-						<span class="mt-0.5 flex-shrink-0 font-bold text-orange">→</span>
-						No way to leave a chatroom once joined
-					</li>
-					<li class="flex gap-3">
-						<span class="mt-0.5 flex-shrink-0 font-bold text-orange">→</span>
-						Event creation and home browsing shared the same screen — users couldn't distinguish
-						which mode they were in
-					</li>
+		<div class="mb-6 grid gap-6 lg:grid-cols-2 lg:gap-10">
+			<p class="text-sm leading-loose text-gray-600 dark:text-gray-400">
+				We sketched four core task flows. A cross-team heuristic evaluation surfaced
+				<strong class="text-black dark:text-white">12 issues</strong>, three rated most severe:
+			</p>
+			<div class="rounded-xl bg-gray-50 p-4 dark:bg-gray-900">
+				<ul class="space-y-2 text-xs text-gray-600 dark:text-gray-400">
+					<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>No send button visible in chat</li>
+					<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>No way to leave a chatroom</li>
+					<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>Event creation and home browsing shared the same screen</li>
 				</ul>
 			</div>
 		</div>
 
-		<!-- Before eval photos -->
-		<p class="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400">Before heuristic evaluation</p>
-		<div class="mb-10 grid grid-cols-3 gap-4">
-			<figure class="flex flex-col gap-2">
-				<img
-					src="/images/palup/paper_prototype_before_eval_create_event.jpg"
-					alt="Paper prototype before evaluation — Create Event flow"
-					class="w-full rounded-xl object-cover shadow ring-1 ring-black/5"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-400">Create Event</figcaption>
-			</figure>
-			<figure class="flex flex-col gap-2">
-				<img
-					src="/images/palup/paper_prototype_before_eval_view_event_chatroom.jpg"
-					alt="Paper prototype before evaluation — View Event & Chatroom flow"
-					class="w-full rounded-xl object-cover shadow ring-1 ring-black/5"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-400">View Event &amp; Chatroom</figcaption>
-			</figure>
-			<figure class="flex flex-col gap-2">
-				<img
-					src="/images/palup/paper_prototype_before_eval_profile.jpg"
-					alt="Paper prototype before evaluation — Profile flow"
-					class="w-full rounded-xl object-cover shadow ring-1 ring-black/5"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-400">Profile</figcaption>
-			</figure>
+		<p class="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">Before heuristic evaluation</p>
+		<div class="mb-6 flex justify-center">
+			<div class="grid w-full max-w-lg grid-cols-3 gap-3">
+				<figure class="flex flex-col gap-1">
+					<img src="/images/palup/paper_prototype_before_eval_create_event.jpg" alt="Paper prototype before — Create Event" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+					<figcaption class="text-center text-xs text-gray-400">Create Event</figcaption>
+				</figure>
+				<figure class="flex flex-col gap-1">
+					<img src="/images/palup/paper_prototype_before_eval_view_event_chatroom.jpg" alt="Paper prototype before — View Event & Chatroom" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+					<figcaption class="text-center text-xs text-gray-400">View Event &amp; Chatroom</figcaption>
+				</figure>
+				<figure class="flex flex-col gap-1">
+					<img src="/images/palup/paper_prototype_before_eval_profile.jpg" alt="Paper prototype before — Profile" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
+					<figcaption class="text-center text-xs text-gray-400">Profile</figcaption>
+				</figure>
+			</div>
 		</div>
 
-		<!-- After eval photos -->
-		<p class="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400">After heuristic evaluation — revised paper prototypes</p>
-		<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-			<figure class="flex flex-col gap-2">
-				<img
-					src="/images/palup/paper_prototype_after_eval_create_event.jpg"
-					alt="Paper prototype after evaluation — Create Event"
-					class="w-full rounded-xl object-cover shadow ring-1 ring-black/5"
-					loading="lazy"
-				/>
+		<p class="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">After heuristic evaluation</p>
+		<div class="grid grid-cols-3 gap-3 sm:grid-cols-6">
+			<figure class="flex flex-col gap-1">
+				<img src="/images/palup/paper_prototype_after_eval_create_event.jpg" alt="Paper prototype after — Create Event" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
 				<figcaption class="text-center text-xs text-gray-400">Create Event</figcaption>
 			</figure>
-			<figure class="flex flex-col gap-2">
-				<img
-					src="/images/palup/paper_prototype_after_eval_join_event_1.jpg"
-					alt="Paper prototype after evaluation — Join Event (1)"
-					class="w-full rounded-xl object-cover shadow ring-1 ring-black/5"
-					loading="lazy"
-				/>
+			<figure class="flex flex-col gap-1">
+				<img src="/images/palup/paper_prototype_after_eval_join_event_1.jpg" alt="Paper prototype after — Join Event 1" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
 				<figcaption class="text-center text-xs text-gray-400">Join Event (1)</figcaption>
 			</figure>
-			<figure class="flex flex-col gap-2">
-				<img
-					src="/images/palup/paper_prototype_after_eval_join_event_2.jpg"
-					alt="Paper prototype after evaluation — Join Event (2)"
-					class="w-full rounded-xl object-cover shadow ring-1 ring-black/5"
-					loading="lazy"
-				/>
+			<figure class="flex flex-col gap-1">
+				<img src="/images/palup/paper_prototype_after_eval_join_event_2.jpg" alt="Paper prototype after — Join Event 2" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
 				<figcaption class="text-center text-xs text-gray-400">Join Event (2)</figcaption>
 			</figure>
-			<figure class="flex flex-col gap-2">
-				<img
-					src="/images/palup/paper_prototype_after_eval_chatroom.png"
-					alt="Paper prototype after evaluation — Chatroom"
-					class="w-full rounded-xl object-cover shadow ring-1 ring-black/5"
-					loading="lazy"
-				/>
+			<figure class="flex flex-col gap-1">
+				<img src="/images/palup/paper_prototype_after_eval_chatroom.png" alt="Paper prototype after — Chatroom" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
 				<figcaption class="text-center text-xs text-gray-400">Chatroom</figcaption>
 			</figure>
-			<figure class="flex flex-col gap-2">
-				<img
-					src="/images/palup/paper_prototype_after_eval_profile.png"
-					alt="Paper prototype after evaluation — Profile"
-					class="w-full rounded-xl object-cover shadow ring-1 ring-black/5"
-					loading="lazy"
-				/>
+			<figure class="flex flex-col gap-1">
+				<img src="/images/palup/paper_prototype_after_eval_profile.png" alt="Paper prototype after — Profile" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
 				<figcaption class="text-center text-xs text-gray-400">Profile</figcaption>
 			</figure>
-		</div>
-		<div class="mt-4 grid grid-cols-2 gap-4 lg:w-2/5">
-			<figure class="flex flex-col gap-2">
-				<img
-					src="/images/palup/paper_prototype_after_eval_setting.png"
-					alt="Paper prototype after evaluation — Settings"
-					class="w-full rounded-xl object-cover shadow ring-1 ring-black/5"
-					loading="lazy"
-				/>
+			<figure class="flex flex-col gap-1">
+				<img src="/images/palup/paper_prototype_after_eval_setting.png" alt="Paper prototype after — Settings" class="w-full rounded-lg object-cover shadow ring-1 ring-black/5" loading="lazy" />
 				<figcaption class="text-center text-xs text-gray-400">Settings</figcaption>
 			</figure>
 		</div>
 	</div>
 
-	<!-- ─── Phase 02: Wireframes ─── -->
-	<div class="mb-24 rounded-3xl bg-gray-50 p-8 dark:bg-gray-900 lg:p-14">
-		<div class="mb-10 flex items-start gap-5">
-			<span class="font-monospace text-6xl font-bold leading-none text-orange opacity-20 lg:text-8xl" aria-hidden="true">02</span>
-			<div class="pt-2">
-				<p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange">Phase 02</p>
-				<h3 class="font-monospace text-2xl font-bold text-black dark:text-white lg:text-3xl">Wireframes — Low Fidelity</h3>
+	<!-- ─── Phase 02 ─── -->
+	<div class="mb-10 rounded-2xl bg-gray-50 p-6 dark:bg-gray-900 lg:p-10">
+		<div class="mb-6 flex items-start gap-4">
+			<span class="font-monospace text-5xl font-bold leading-none text-orange opacity-20" aria-hidden="true">02</span>
+			<div class="pt-1">
+				<p class="mb-0.5 text-xs font-bold uppercase tracking-widest text-orange">Phase 02</p>
+				<h3 class="font-monospace text-xl font-bold text-black dark:text-white">Wireframes — Low Fidelity</h3>
 			</div>
 		</div>
 
-		<div class="mb-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
-			<div>
-				<p class="mb-4 text-base leading-loose text-gray-600 dark:text-gray-400">
-					We moved into Figma and connected all four flows into a single interactive prototype, applying
-					every fix from the heuristic evaluation.
-				</p>
-			</div>
-			<div>
-				<p class="mb-3 text-xs font-bold uppercase tracking-widest text-orange">Key changes</p>
-				<ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-					<li class="flex gap-3"><span class="mt-0.5 flex-shrink-0 font-bold text-orange">→</span> Added floating "+" button as dedicated event creation trigger</li>
-					<li class="flex gap-3"><span class="mt-0.5 flex-shrink-0 font-bold text-orange">→</span> Added error states to the login flow</li>
-					<li class="flex gap-3"><span class="mt-0.5 flex-shrink-0 font-bold text-orange">→</span> Separated browsing and creating into distinct screens</li>
-				</ul>
-			</div>
+		<div class="mb-6 grid gap-6 lg:grid-cols-2 lg:gap-10">
+			<p class="text-sm leading-loose text-gray-600 dark:text-gray-400">
+				Moved into Figma and connected all flows into an interactive prototype, applying every heuristic evaluation fix.
+			</p>
+			<ul class="space-y-1.5 text-xs text-gray-600 dark:text-gray-400">
+				<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>Added floating "+" button as dedicated event creation trigger</li>
+				<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>Added error states to the login flow</li>
+				<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>Separated browsing and creating into distinct screens</li>
+			</ul>
 		</div>
 
-		<!-- Wireframe screenshots — 6 phone screens in 2 rows of 3 -->
-		<div class="mb-8 flex flex-wrap justify-center gap-6">
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/figma_wireframe_screenshot_home.png"
-					alt="Figma wireframe — Home screen"
-					class="w-[160px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[190px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Home</figcaption>
+		<!-- 6 wireframe phones in one row -->
+		<div class="mb-6 grid grid-cols-3 gap-3 sm:grid-cols-6">
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/figma_wireframe_screenshot_home.png" alt="Wireframe — Home" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Home</figcaption>
 			</figure>
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/figma_wireframe_screenshot_create_event_preference.png"
-					alt="Figma wireframe — Create Event preferences"
-					class="w-[160px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[190px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Create Event — preferences</figcaption>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/figma_wireframe_screenshot_create_event_preference.png" alt="Wireframe — Create Event preferences" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Preferences</figcaption>
 			</figure>
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/figma_wireframe_screenshot_create_event_preview.png"
-					alt="Figma wireframe — Create Event preview"
-					class="w-[160px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[190px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Create Event — preview</figcaption>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/figma_wireframe_screenshot_create_event_preview.png" alt="Wireframe — Create Event preview" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Preview</figcaption>
 			</figure>
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/figma_wireframe_screenshot_create_event_posted.png"
-					alt="Figma wireframe — Event posted"
-					class="w-[160px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[190px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Event posted</figcaption>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/figma_wireframe_screenshot_create_event_posted.png" alt="Wireframe — Event posted" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Posted</figcaption>
 			</figure>
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/figma_wireframe_screenshot_chatroom.png"
-					alt="Figma wireframe — Chatroom"
-					class="w-[160px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[190px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Chatroom</figcaption>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/figma_wireframe_screenshot_chatroom.png" alt="Wireframe — Chatroom" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Chatroom</figcaption>
 			</figure>
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/figma_wireframe_screenshot_login_error.png"
-					alt="Figma wireframe — Login error state"
-					class="w-[160px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[190px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Login error state</figcaption>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/figma_wireframe_screenshot_login_error.png" alt="Wireframe — Login error" class="w-full rounded-xl shadow ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Login error</figcaption>
 			</figure>
 		</div>
 
-		<!-- Heuristic evaluation screenshots side by side -->
-		<p class="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400">Heuristic evaluation — issues annotated on screens</p>
-		<div class="grid gap-4 sm:grid-cols-2">
-			<figure class="flex flex-col gap-2">
-				<img
-					src="/images/palup/first_round_heuristic_eval_chatroom.png"
-					alt="First round heuristic evaluation — Chatroom issues identified"
-					class="w-full rounded-xl shadow ring-1 ring-black/5"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-400">Chatroom issues</figcaption>
-			</figure>
-			<figure class="flex flex-col gap-2">
-				<img
-					src="/images/palup/first_round_heuristic_eval_create_event_profile.jpg"
-					alt="First round heuristic evaluation — Create Event and Profile issues"
-					class="w-full rounded-xl shadow ring-1 ring-black/5"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-400">Create Event &amp; Profile issues</figcaption>
-			</figure>
-		</div>
 	</div>
 
-	<!-- ─── Phase 03: Medium-Fi ─── -->
-	<div class="mb-24">
-		<div class="mb-10 flex items-start gap-5">
-			<span class="font-monospace text-6xl font-bold leading-none text-orange opacity-20 lg:text-8xl" aria-hidden="true">03</span>
-			<div class="pt-2">
-				<p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange">Phase 03</p>
-				<h3 class="font-monospace text-2xl font-bold text-black dark:text-white lg:text-3xl">Medium-Fidelity Prototype</h3>
+	<!-- ─── Phase 03 ─── -->
+	<div class="mb-10">
+		<div class="mb-6 flex items-start gap-4">
+			<span class="font-monospace text-5xl font-bold leading-none text-orange opacity-20" aria-hidden="true">03</span>
+			<div class="pt-1">
+				<p class="mb-0.5 text-xs font-bold uppercase tracking-widest text-orange">Phase 03</p>
+				<h3 class="font-monospace text-xl font-bold text-black dark:text-white">Medium-Fidelity Prototype</h3>
 			</div>
 		</div>
 
-		<div class="flex flex-col items-start gap-10 lg:flex-row lg:items-center lg:gap-16">
-			<!-- Text -->
+		<div class="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:gap-12">
 			<div class="lg:w-1/2">
-				<p class="mb-6 text-base leading-loose text-gray-600 dark:text-gray-400">
-					User testing with 4–5 participants revealed two persistent issues in the Create Event flow
-					that had survived from the wireframe stage.
-				</p>
-				<div class="space-y-5">
-					<div class="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
-						<p class="mb-1 text-xs font-bold uppercase tracking-widest text-gray-400">Issue 1</p>
-						<p class="mb-2 font-semibold text-black dark:text-white">
-							Newly posted events weren't tappable on Home
-						</p>
-						<p class="text-sm text-gray-500">
-							Users had to navigate to My Events to see their new event — no affordance on the Home
-							screen.
-						</p>
-						<p class="mt-2 text-sm font-medium text-orange">
-							Fix: All event cards made tappable across every screen.
-						</p>
+				<div class="space-y-4">
+					<div class="rounded-xl border border-gray-100 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+						<p class="mb-0.5 text-xs font-bold uppercase tracking-widest text-gray-400">Issue 1</p>
+						<p class="mb-1 text-sm font-semibold text-black dark:text-white">Newly posted events weren't tappable on Home</p>
+						<p class="text-xs text-gray-500">Users had to navigate to My Events to see their new event.</p>
+						<p class="mt-1 text-xs font-medium text-orange">Fix: All event cards made tappable across every screen.</p>
 					</div>
-					<div class="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
-						<p class="mb-1 text-xs font-bold uppercase tracking-widest text-gray-400">Issue 2</p>
-						<p class="mb-2 font-semibold text-black dark:text-white">
-							"Vibe" field label confused participants
-						</p>
-						<p class="text-sm text-gray-500">
-							Options (Quiet / Casual / Deep) were too abstract. Users couldn't interpret what
-							selecting "Quiet" would mean for the actual dining experience.
-						</p>
-						<p class="mt-2 text-sm font-medium text-orange">
-							Fix: Renamed to "Dining Atmosphere" with options: Quiet Meal / Casual Hangout / Deep
-							Conversation.
-						</p>
+					<div class="rounded-xl border border-gray-100 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+						<p class="mb-0.5 text-xs font-bold uppercase tracking-widest text-gray-400">Issue 2</p>
+						<p class="mb-1 text-sm font-semibold text-black dark:text-white">"Vibe" field label confused participants</p>
+						<p class="text-xs text-gray-500">Options (Quiet / Casual / Deep) were too abstract to interpret.</p>
+						<p class="mt-1 text-xs font-medium text-orange">Fix: Renamed to "Dining Atmosphere" with clearer options.</p>
 					</div>
 				</div>
 			</div>
 
-			<!-- 2 phone screenshots side by side -->
-			<div class="flex justify-center gap-6 lg:w-1/2">
-				<figure class="flex flex-col items-center gap-2">
-					<img
-						src="/images/palup/medium_fi_create_event_preferences.png"
-						alt="Medium-fi — Create Event preferences with Dining Atmosphere renamed"
-						class="w-[180px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[210px]"
-						loading="lazy"
-					/>
-					<figcaption class="text-center text-xs text-gray-500">Create Event — preferences</figcaption>
+			<div class="flex justify-center gap-4 lg:w-1/2">
+				<figure class="flex flex-col items-center gap-1">
+					<img src="/images/palup/medium_fi_create_event_preferences.png" alt="Medium-fi — Create Event preferences" class="w-[150px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[180px]" loading="lazy" />
+					<figcaption class="text-center text-xs text-gray-400">Create Event — preferences</figcaption>
 				</figure>
-				<figure class="flex flex-col items-center gap-2">
-					<img
-						src="/images/palup/medium_fi_tappable_card.png"
-						alt="Medium-fi — Tappable event card on Home screen"
-						class="w-[180px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[210px]"
-						loading="lazy"
-					/>
-					<figcaption class="text-center text-xs text-gray-500">Tappable event card</figcaption>
+				<figure class="flex flex-col items-center gap-1">
+					<img src="/images/palup/medium_fi_tappable_card.png" alt="Medium-fi — Tappable event card" class="w-[150px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[180px]" loading="lazy" />
+					<figcaption class="text-center text-xs text-gray-400">Tappable event card</figcaption>
 				</figure>
 			</div>
 		</div>
 	</div>
 
-	<!-- ─── Phase 04: High-Fi ─── -->
-	<div class="rounded-3xl bg-gray-50 p-8 dark:bg-gray-900 lg:p-14">
-		<div class="mb-10 flex items-start gap-5">
-			<span class="font-monospace text-6xl font-bold leading-none text-orange opacity-20 lg:text-8xl" aria-hidden="true">04</span>
-			<div class="pt-2">
-				<p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange">Phase 04</p>
-				<h3 class="font-monospace text-2xl font-bold text-black dark:text-white lg:text-3xl">High-Fidelity Prototype</h3>
+	<!-- ─── Phase 04 ─── -->
+	<div class="rounded-2xl bg-gray-50 p-6 dark:bg-gray-900 lg:p-10">
+		<div class="mb-6 flex items-start gap-4">
+			<span class="font-monospace text-5xl font-bold leading-none text-orange opacity-20" aria-hidden="true">04</span>
+			<div class="pt-1">
+				<p class="mb-0.5 text-xs font-bold uppercase tracking-widest text-orange">Phase 04</p>
+				<h3 class="font-monospace text-xl font-bold text-black dark:text-white">High-Fidelity Prototype</h3>
 			</div>
 		</div>
 
-		<p class="mb-10 max-w-xl text-base leading-loose text-gray-600 dark:text-gray-400">
-			A second round of user testing and expert critique pushed the design further. Six distinct
-			issues were identified and addressed.
-		</p>
-
 		<!-- Changes table -->
-		<div class="mb-14 overflow-x-auto rounded-2xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
-			<table class="w-full text-sm">
+		<div class="mb-8 overflow-x-auto rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+			<table class="w-full text-xs">
 				<thead>
 					<tr class="border-b border-gray-200 dark:border-gray-700">
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Issue found</th>
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Fix applied</th>
+						<th class="px-4 py-3 text-left font-bold uppercase tracking-widest text-orange">Issue found</th>
+						<th class="px-4 py-3 text-left font-bold uppercase tracking-widest text-orange">Fix applied</th>
 					</tr>
 				</thead>
 				<tbody class="divide-y divide-gray-100 dark:divide-gray-700">
 					<tr>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">"Budget" vs. total cost ambiguity</td>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Renamed to Budget/Person</td>
+						<td class="px-4 py-2.5 text-gray-600 dark:text-gray-400">"Budget" vs. total cost ambiguity</td>
+						<td class="px-4 py-2.5 font-medium text-black dark:text-white">Renamed to Budget/Person</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Group size unclear if creator counted</td>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Added hint: <em>incl. yourself</em></td>
+						<td class="px-4 py-2.5 text-gray-600 dark:text-gray-400">Group size unclear if creator counted</td>
+						<td class="px-4 py-2.5 font-medium text-black dark:text-white">Added hint: <em>incl. yourself</em></td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Cancel/Edit only accessible from My Events</td>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Added buttons directly on event detail page</td>
+						<td class="px-4 py-2.5 text-gray-600 dark:text-gray-400">Cancel/Edit only accessible from My Events</td>
+						<td class="px-4 py-2.5 font-medium text-black dark:text-white">Added buttons on event detail page</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Chat input field below keyboard</td>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Repositioned above keyboard (standard mobile pattern)</td>
+						<td class="px-4 py-2.5 text-gray-600 dark:text-gray-400">Chat input field below keyboard</td>
+						<td class="px-4 py-2.5 font-medium text-black dark:text-white">Repositioned above keyboard</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Mute toggle had no visible feedback</td>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Replaced with pinned notice at top of chatroom</td>
+						<td class="px-4 py-2.5 text-gray-600 dark:text-gray-400">Mute toggle had no visible feedback</td>
+						<td class="px-4 py-2.5 font-medium text-black dark:text-white">Replaced with pinned notice at top of chatroom</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Report reason locked after selection</td>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Made reason editable before submission</td>
+						<td class="px-4 py-2.5 text-gray-600 dark:text-gray-400">Report reason locked after selection</td>
+						<td class="px-4 py-2.5 font-medium text-black dark:text-white">Made editable before submission</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 
-		<!-- Home screen — featured larger -->
-		<p class="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400">Home screen</p>
-		<div class="mb-12 flex justify-start">
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/high_fi_homescreen.png"
-					alt="High-fi — Home screen"
-					class="w-[200px] rounded-3xl shadow-xl ring-1 ring-black/10 lg:w-[240px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Home</figcaption>
+		<!-- Home + Create Event flow — 5 phones in one row -->
+		<p class="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">Home &amp; Create Event flow</p>
+		<div class="mb-6 grid grid-cols-5 gap-3">
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/high_fi_homescreen.png" alt="High-fi — Home" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Home</figcaption>
+			</figure>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/high_fi_create_event_details.png" alt="High-fi — Details" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Details</figcaption>
+			</figure>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/high_fi_create_event_preference_page.png" alt="High-fi — Preferences" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Preferences</figcaption>
+			</figure>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/high_fi_create_event_preview.png" alt="High-fi — Preview" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Preview</figcaption>
+			</figure>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/high_fi_create_event_posted.png" alt="High-fi — Posted" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Posted</figcaption>
 			</figure>
 		</div>
 
-		<!-- Create Event flow — 4 phones in a row -->
-		<p class="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400">Create Event flow</p>
-		<div class="mb-12 flex flex-wrap gap-5">
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/high_fi_create_event_details.png"
-					alt="High-fi — Create Event: fill in details"
-					class="w-[150px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[180px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Details</figcaption>
+		<!-- Chatroom + My Events + Profile — 5 phones in one row -->
+		<p class="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">Chatroom, My Events &amp; Profile</p>
+		<div class="grid grid-cols-5 gap-3">
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/high_fi_chatroom.png" alt="High-fi — Chatroom" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Chatroom</figcaption>
 			</figure>
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/high_fi_create_event_preference_page.png"
-					alt="High-fi — Create Event: dining atmosphere preferences"
-					class="w-[150px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[180px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Preferences</figcaption>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/high_fi_chatroom_pinned_notice.png" alt="High-fi — Chatroom pinned notice" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Pinned notice</figcaption>
 			</figure>
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/high_fi_create_event_preview.png"
-					alt="High-fi — Create Event: preview before posting"
-					class="w-[150px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[180px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Preview</figcaption>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/high_fi_my_events.png" alt="High-fi — My Events" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">My Events</figcaption>
 			</figure>
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/high_fi_create_event_posted.png"
-					alt="High-fi — Create Event: posted confirmation"
-					class="w-[150px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[180px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Posted</figcaption>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/high_fi_profile_1.png" alt="High-fi — Profile" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Profile</figcaption>
 			</figure>
-		</div>
-
-		<!-- Chatroom — side by side before/after pinned notice -->
-		<p class="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400">Chatroom — with pinned notice fix</p>
-		<div class="mb-12 flex flex-wrap gap-5">
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/high_fi_chatroom.png"
-					alt="High-fi — Chatroom"
-					class="w-[180px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[210px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Chatroom</figcaption>
-			</figure>
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/high_fi_chatroom_pinned_notice.png"
-					alt="High-fi — Chatroom with pinned notice at top"
-					class="w-[180px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[210px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Chatroom — pinned notice</figcaption>
-			</figure>
-		</div>
-
-		<!-- My Events + Profile -->
-		<p class="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400">My Events &amp; Profile</p>
-		<div class="flex flex-wrap gap-5">
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/high_fi_my_events.png"
-					alt="High-fi — My Events page"
-					class="w-[180px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[210px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">My Events</figcaption>
-			</figure>
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/high_fi_profile_1.png"
-					alt="High-fi — Profile page (main)"
-					class="w-[180px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[210px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Profile</figcaption>
-			</figure>
-			<figure class="flex flex-col items-center gap-2">
-				<img
-					src="/images/palup/high_fi_profile_2.png"
-					alt="High-fi — Profile page (settings & security)"
-					class="w-[180px] rounded-2xl shadow-lg ring-1 ring-black/10 lg:w-[210px]"
-					loading="lazy"
-				/>
-				<figcaption class="text-center text-xs text-gray-500">Profile — settings</figcaption>
+			<figure class="flex flex-col items-center gap-1">
+				<img src="/images/palup/high_fi_profile_2.png" alt="High-fi — Profile settings" class="w-full rounded-2xl shadow-lg ring-1 ring-black/10" loading="lazy" />
+				<figcaption class="text-center text-xs text-gray-400">Profile settings</figcaption>
 			</figure>
 		</div>
 	</div>

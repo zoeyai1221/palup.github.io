@@ -1,70 +1,67 @@
 ---
 ---
 
-<section data-testid="evaluation" id="evaluation" class="py-20 lg:py-28">
+<section data-testid="evaluation" id="evaluation" class="py-10 lg:py-14">
 
-	<p class="mb-3 text-xs font-bold uppercase tracking-widest text-orange">04 — Evaluation</p>
-	<h2 class="mb-4 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
+	<p class="mb-2 text-xs font-bold uppercase tracking-widest text-orange">04 — Evaluation</p>
+	<h2 class="mb-3 font-monospace text-2xl text-black dark:text-white lg:text-4xl">
 		What we tested and what we found
 	</h2>
-	<p class="mb-14 max-w-xl text-base leading-loose text-gray-600 dark:text-gray-400">
-		Two rounds of in-person user testing (heuristic evaluation + think-aloud sessions) and one round
-		of expert critique. 4–5 participants per round. No prior exposure to the prototype.
+	<p class="mb-8 max-w-xl text-sm leading-loose text-gray-600 dark:text-gray-400">
+		Two rounds of in-person user testing (heuristic evaluation + think-aloud sessions). 4–5 participants per round. No prior exposure to the prototype.
 	</p>
 
 	<!-- Round 1 -->
-	<div class="mb-14">
-		<div class="mb-6 flex items-center gap-4">
-			<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-orange text-sm font-bold text-white">1</div>
+	<div class="mb-8">
+		<div class="mb-4 flex items-center gap-3">
+			<div class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-orange text-xs font-bold text-white">1</div>
 			<div>
 				<p class="text-xs font-bold uppercase tracking-widest text-orange">Round 1</p>
-				<h3 class="font-monospace text-xl font-bold text-black dark:text-white">Heuristic Evaluation + User Testing</h3>
+				<h3 class="font-monospace text-lg font-bold text-black dark:text-white">Heuristic Evaluation + User Testing</h3>
 			</div>
 		</div>
-		<p class="mb-5 max-w-2xl text-sm leading-relaxed text-gray-500">
-			Evaluated on the wireframe / medium-fidelity prototype. Each team member ran a task flow
-			session and compiled findings using Nielsen's heuristics.
+		<p class="mb-3 text-xs leading-relaxed text-gray-500">
+			Evaluated on the wireframe / medium-fidelity prototype using Nielsen's heuristics.
 		</p>
-
-		<div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
-			<table class="w-full text-sm">
+		<div class="overflow-x-auto rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
+			<table class="w-full text-xs">
 				<thead>
 					<tr class="border-b border-gray-200 dark:border-gray-700">
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Task</th>
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Issue (Heuristic violated)</th>
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Recommendation</th>
+						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Task</th>
+						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Issue</th>
+						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Recommendation</th>
 					</tr>
 				</thead>
 				<tbody class="divide-y divide-gray-100 dark:divide-gray-800">
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Create an event</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">After creating, users could not tap the event card on the Home tab — had to navigate to My Events. <em>Violates: Consistency and Standards.</em></td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Made all event cards tappable, linking to the event detail page from any screen.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Create an event</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">After creating, event card on Home tab was not tappable — users had to navigate to My Events. <em>Violates: Consistency and Standards.</em></td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">All event cards made tappable, linking to event detail page from any screen.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Create an event</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">"Vibe" label and options (Quiet / Casual / Deep) were too abstract — users couldn't interpret their meaning. <em>Violates: Match Between System and Real World.</em></td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Renamed to "Dining Atmosphere" with options: Quiet Meal / Casual Hangout / Deep Conversation.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Create an event</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">"Vibe" label and options (Quiet / Casual / Deep) too abstract. <em>Violates: Match Between System and Real World.</em></td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Renamed to "Dining Atmosphere"; options: Quiet Meal / Casual Hangout / Deep Conversation.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Find and join an event</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Participant avatars looked clickable but did nothing — users expected to see participant information when tapping them.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Made avatars clickable to display participant profile details.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Find and join an event</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Participant avatars looked clickable but did nothing — users expected profile info on tap.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Made avatars clickable to display participant profile details.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Find and join an event</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Search interaction was unclear — keyboard did not appear automatically when users tapped the search bar.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Keyboard now appears immediately when the search bar is tapped.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Find and join an event</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Keyboard did not appear automatically when tapping the search bar.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Keyboard now appears immediately on search bar tap.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Communicate in chatroom</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Toggling "Mute Notifications" had no visible change in the chatroom interface. <em>Violates: Visibility of System Status and User Control and Freedom.</em></td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Added a pinned notice at the top of the chatroom showing key event info (meeting time, location) for all participants.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Communicate in chatroom</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Toggling "Mute Notifications" had no visible change. <em>Violates: Visibility of System Status.</em></td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Added pinned notice at top of chatroom showing key event info for all participants.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Login &amp; manage profile</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Error message on failed login was not visually prominent — easy to overlook. <em>Violates: Visibility of System Status.</em></td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Redesigned error message with stronger contrast and clearer placement.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Login &amp; manage profile</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Error message on failed login not visually prominent — easy to overlook. <em>Violates: Visibility of System Status.</em></td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Redesigned with stronger contrast and clearer placement.</td>
 					</tr>
 				</tbody>
 			</table>
@@ -72,128 +69,116 @@
 	</div>
 
 	<!-- Round 2 -->
-	<div>
-		<div class="mb-6 flex items-center gap-4">
-			<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-orange text-sm font-bold text-white">2</div>
+	<div class="mb-8">
+		<div class="mb-4 flex items-center gap-3">
+			<div class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-orange text-xs font-bold text-white">2</div>
 			<div>
 				<p class="text-xs font-bold uppercase tracking-widest text-orange">Round 2</p>
-				<h3 class="font-monospace text-xl font-bold text-black dark:text-white">Heuristic Evaluation + User Testing</h3>
+				<h3 class="font-monospace text-lg font-bold text-black dark:text-white">Heuristic Evaluation + User Testing</h3>
 			</div>
 		</div>
-		<p class="mb-5 max-w-2xl text-sm leading-relaxed text-gray-500">
-			Evaluated on the high-fidelity prototype. Heuristic evaluation surfaced structural issues,
-			followed by think-aloud user testing with 4–5 participants across all four task flows.
+		<p class="mb-3 text-xs leading-relaxed text-gray-500">
+			Evaluated on the high-fidelity prototype. Heuristic evaluation surfaced structural issues; think-aloud sessions with 4–5 new participants followed.
 		</p>
 
-		<p class="mb-3 text-xs font-bold uppercase tracking-widest text-gray-400">Heuristic Evaluation</p>
-		<div class="mb-8 overflow-x-auto rounded-2xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
-			<table class="w-full text-sm">
+		<p class="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">Heuristic Evaluation</p>
+		<div class="mb-4 overflow-x-auto rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
+			<table class="w-full text-xs">
 				<thead>
 					<tr class="border-b border-gray-200 dark:border-gray-700">
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Task</th>
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Issue</th>
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Recommendation</th>
-					</tr>
-				</thead>
-				<tbody class="divide-y divide-gray-100 dark:divide-gray-800">
-
-		<div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
-			<table class="w-full text-sm">
-				<thead>
-					<tr class="border-b border-gray-200 dark:border-gray-700">
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Task</th>
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Issue</th>
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Recommendation</th>
+						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Task</th>
+						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Issue</th>
+						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Recommendation</th>
 					</tr>
 				</thead>
 				<tbody class="divide-y divide-gray-100 dark:divide-gray-800">
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Cancel and Edit Event — from event detail page</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Users who accessed an event detail page from the Home screen had no way to cancel or edit — they had to go to My Events first. Limits flexibility of use.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Added Cancel and Edit buttons directly on the event detail page, regardless of entry point.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Cancel and Edit Event</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Users entering from Home had no way to cancel or edit — had to go to My Events. Limits flexibility of use.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Added Cancel and Edit buttons directly on the event detail page regardless of entry point.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">View Event details</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Only a small "›" button on the right side of an event card was tappable. Conflicts with the proximity principle — the full card should be the target.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Retained "›" as a visual affordance but expanded the entire event card as the tappable area.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">View Event details</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Only a small "›" button was tappable. Conflicts with proximity principle.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Retained "›" as visual cue but expanded entire event card as the tappable area.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Communicate in chatroom — send a message</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Chat input field was positioned beneath the keyboard, deviating from standard mobile messaging patterns and creating an unnatural layout.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Input field repositioned directly above the keyboard, matching standard mobile messaging conventions.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Communicate in chatroom — send message</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Chat input field positioned beneath keyboard, deviating from standard mobile patterns.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Input field repositioned directly above keyboard.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Newly established chatroom — edge case</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">The design did not account for the empty state of a newly created chatroom (no messages, no participants yet) — interface felt incomplete.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Added an empty chatroom state to represent real user scenarios after event creation.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Newly established chatroom — edge case</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">No empty state design for a new chatroom with no messages or participants yet.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Added empty chatroom state to represent real post-creation scenarios.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Login &amp; manage profile</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">The Login &amp; Security screen had no clear entry point for help or support related to account and security tasks.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Added a Help &amp; Support button directly on the Login &amp; Security page.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Login &amp; manage profile</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Login &amp; Security screen had no entry point for help or support.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Added Help &amp; Support button on the Login &amp; Security page.</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 
-		<p class="mb-3 text-xs font-bold uppercase tracking-widest text-gray-400">User Testing</p>
-		<div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
-			<table class="w-full text-sm">
+		<p class="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">User Testing</p>
+		<div class="overflow-x-auto rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
+			<table class="w-full text-xs">
 				<thead>
 					<tr class="border-b border-gray-200 dark:border-gray-700">
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Task</th>
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Issue</th>
-						<th class="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest text-orange">Recommendation</th>
+						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Task</th>
+						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Issue</th>
+						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Recommendation</th>
 					</tr>
 				</thead>
 				<tbody class="divide-y divide-gray-100 dark:divide-gray-800">
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Create Event — preferences screen</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">"Budget" was ambiguous (total vs. per-person?). "Group Size" was unclear whether it includes the creator.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Renamed "Budget" to "Budget/Person"; added hint "incl. yourself" to Group Size field.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Create Event — preferences</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">"Budget" ambiguous (total vs. per-person?). "Group Size" unclear if creator counted.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Renamed to "Budget/Person"; added hint "incl. yourself" to Group Size.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Communicate in chatroom — report a user</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Once a report reason was selected, users couldn't modify it without restarting the entire flow.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Updated so users can change their selected reason before submission, without needing to restart.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Communicate in chatroom — report user</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Once a report reason was selected, users couldn't modify it without restarting.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Users can now change selected reason before submission.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Communicate in chatroom — view user by clicking avatars</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Users could tap other participants' avatars to view profiles, but could NOT tap "You" to view their own profile — had to navigate away from the chatroom.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Tapping "You" now opens the user's own profile preview from within the chatroom.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Communicate in chatroom — view user</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Could tap others' avatars but NOT "You" to view own profile — had to navigate away.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Tapping "You" now opens own profile preview from within the chatroom.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">Login &amp; manage profile</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Confirmation screens and selected states lacked visual polish — users couldn't clearly recognize when an action was completed.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Redesigned confirmation screens with clearer card layout and subtle highlight background.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">Login &amp; manage profile</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Confirmation screens lacked polish — hard to recognise completed actions.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Redesigned with clearer card layout and subtle highlight background.</td>
 					</tr>
 					<tr>
-						<td class="px-5 py-4 font-medium text-black dark:text-white">View Participants / View User Profile</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Only part of the participant list was clickable (e.g., only the first of four users). Participant avatars were missing from the list.</td>
-						<td class="px-5 py-4 text-gray-600 dark:text-gray-400">Added avatars for all participants; made every participant in the list clickable.</td>
+						<td class="px-4 py-2 font-medium text-black dark:text-white">View Participants / User Profile</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Only part of participant list was clickable; avatars missing from list.</td>
+						<td class="px-4 py-2 text-gray-600 dark:text-gray-400">Added avatars for all participants; made every participant clickable.</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
 
-	<!-- Notable findings callout -->
-	<div class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-		<div class="rounded-2xl bg-gray-50 p-6 dark:bg-gray-900">
-			<p class="mb-2 text-3xl font-bold text-orange">16</p>
-			<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">total issues surfaced across 2 evaluation rounds</p>
+	<!-- Notable findings -->
+	<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+		<div class="rounded-xl bg-gray-50 p-4 dark:bg-gray-900">
+			<p class="mb-1 text-2xl font-bold text-orange">16</p>
+			<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">total issues surfaced across 2 evaluation rounds</p>
 		</div>
-		<div class="rounded-2xl bg-gray-50 p-6 dark:bg-gray-900">
-			<p class="mb-2 font-semibold text-black dark:text-white">Label clarity</p>
-			<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">most recurring friction point — small wording changes had outsized impact on user confidence</p>
+		<div class="rounded-xl bg-gray-50 p-4 dark:bg-gray-900">
+			<p class="mb-1 text-sm font-semibold text-black dark:text-white">Label clarity</p>
+			<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">most recurring friction — small wording changes had outsized impact on user confidence</p>
 		</div>
-		<div class="rounded-2xl bg-gray-50 p-6 dark:bg-gray-900">
-			<p class="mb-2 font-semibold text-black dark:text-white">Navigation consistency</p>
-			<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">users expected the same action to be available regardless of which screen they entered from</p>
+		<div class="rounded-xl bg-gray-50 p-4 dark:bg-gray-900">
+			<p class="mb-1 text-sm font-semibold text-black dark:text-white">Navigation consistency</p>
+			<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">users expected the same action regardless of which screen they entered from</p>
 		</div>
-		<div class="rounded-2xl bg-gray-50 p-6 dark:bg-gray-900">
-			<p class="mb-2 font-semibold text-black dark:text-white">Safety features</p>
-			<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">report flow and profile previews were expected by participants even when not prompted</p>
+		<div class="rounded-xl bg-gray-50 p-4 dark:bg-gray-900">
+			<p class="mb-1 text-sm font-semibold text-black dark:text-white">Safety features</p>
+			<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">report flow and profile previews were expected even when not prompted</p>
 		</div>
 	</div>
 </section>
