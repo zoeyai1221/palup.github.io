@@ -85,11 +85,12 @@ const { title = 'PalUp | UX Case Study' } = Astro.props as LayoutProps;
 			const obs = new IntersectionObserver(
 				(entries) => {
 					entries.forEach((entry) => {
+						const el = entry.target as HTMLElement;
 						if (entry.isIntersecting) {
-							const el = entry.target as HTMLElement;
 							el.style.animationDelay = `${el.dataset.delay ?? 0}ms`;
 							el.classList.add('in-view');
-							obs.unobserve(el);
+						} else {
+							el.classList.remove('in-view');
 						}
 					});
 				},
