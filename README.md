@@ -1,112 +1,77 @@
-💫 This is a free template to make your portfolio website using **[Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**.
+# PalUp — UX Case Study
 
-### Dark mode
-![Dark mode](https://github.com/veranikabarel/astro-portfolio/assets/48052206/240ab82d-8896-412e-8f52-5cf10d42b1db)
-### Light mode
-![Light mode](https://github.com/veranikabarel/astro-portfolio/assets/48052206/bfa88b30-6dcf-4d5f-bf28-efc3caa27d0f)
-### Lighthouse report
-![Lighthouse report](https://github.com/veranikabarel/astro-portfolio/assets/48052206/e7ad23a4-1a9b-477e-a13e-a321ce6bd3d6)
+A single-page UX portfolio case study for **PalUp**, a mobile app designed to help people find dining companions in a new city. Built with Astro 4 + Tailwind CSS and deployed to GitHub Pages.
 
-## Table of Contents
+**Live site:** https://zoeyai1221.github.io/palup.github.io/
 
-- [Demo](#demo)
-- [Features](#features)
-- [Project structure](#project-structure)
-- [Commands](#commands)
-- [Contributing](#contributing)
-- [Credits](#credits)
+| Light mode | Dark mode |
+|:---:|:---:|
+| ![Light mode](palup_screenshots/palup_github_io_light_mode.png) | ![Dark mode](palup_screenshots/palup_github_io_dark_mode.png) |
 
-## Demo
+## Project
 
-📌 [https://astro-fe-portfolio.netlify.app/](https://astro-fe-portfolio.netlify.app/)
+PalUp addresses the social isolation experienced by Chinese immigrants in Seattle who struggle to find compatible dining companions. The case study documents the full UX process — from user research through high-fidelity prototype — across five sections:
 
-## Features
+1. **The Problem** — Context and core insight
+2. **Research** — 8 semi-structured interviews, affinity diagram, user persona
+3. **Design Process** — Four iterative phases (paper prototype → wireframes → medium-fi → high-fi)
+4. **Evaluation** — Two rounds of heuristic evaluation + think-aloud testing
+5. **Reflection** — What worked, what we'd do differently, what's next
 
-✔️ Integration with **Tailwind CSS** ([@astrojs/tailwind](https://docs.astro.build/en/guides/integrations-guide/tailwind/)) supporting **Dark mode**.
+**Team:** Zoey Ai · Karena Ma · Suiyang Mai · Xinran Wang
 
-✔️ Uses the following integrations:
+**Timeline:** January – April 2026
 
-- @astrojs/mdx
-- @astrojs/image
-- @astrojs/tailwind - with prettier class sorting plugin
-- @astro-icon
-- @astro-seo
-- @astro-navbar
+**Course:** CS 5340 Human-Computer Interaction
 
-✔️([@Playwright](https://github.com/microsoft/playwright)) e2e tests are setted up.
+## Tech Stack
 
-🔜 Blog with frontmatter (title, description, author, date, image, tags) and RSS feed, sitemap and robots.txt
-
-🔜 404 error page
+- [Astro 4](https://astro.build/) — static site generator
+- [Tailwind CSS](https://tailwindcss.com/) — utility-first styling
+- `astro:assets` `<Image>` — optimized image pipeline (WebP conversion, hashed filenames)
+- [astro-navbar](https://github.com/surjithctly/astro-navbar) — responsive nav
+- GitHub Actions + GitHub Pages — CI/CD deployment
 
 ## Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
 ```
 /
+├── .github/workflows/
+│   └── astro.yml              # GitHub Pages deploy workflow
 ├── public/
-│   └── favicon.ico
-|   ├── hero.png
-|   └── ...
+│   └── favicon.svg
 ├── src/
-|   ├── assets/
-|   |   ├── images/
-│   │   |   ├── hero.png
-|   |   |   └── ...
+│   ├── assets/images/palup/   # All case study images (optimized at build time)
 │   ├── components/
-│   │   ├── ui/
-│   │   |   ├── BackToTop.astro
-|   |   |   └── ...
-│   │   ├── About.astro
-│   │   ├── Contact.astro
-|   |   └── ...
-│   ├── content/
-│   │   ├── projects/
-│   │   │   ├── project-1.md
-│   │   │   ├── project-1.md
-│   │   │   └── ...
-│   │   └-- config.ts
+│   │   ├── Navbar.astro
+│   │   ├── Hero.astro         # Phone carousel (spring animation)
+│   │   ├── About.astro        # 01 — The Problem
+│   │   ├── Research.astro     # 02 — Research
+│   │   ├── DesignProcess.astro # 03 — Design Process
+│   │   ├── Evaluation.astro   # 04 — Evaluation
+│   │   ├── Reflection.astro   # 05 — Reflection
+│   │   └── ui/
 │   ├── layouts/
-│   │   ├── Layout.astro
-│   ├── pages/
-│   │   ├── index.astro
-│   ├── tests/
-│   │   ├── index.spec.ts
-├── package.json
+│   │   └── Layout.astro       # Global styles, scroll-reveal observer
+│   └── pages/
+│       └── index.astro
 ├── astro.config.mjs
-└── ...
+└── package.json
 ```
-
-Astro looks for `.astro`, `.md` or `.mdx` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-`src/components/` is where we put any Astro components and similarly `src/layouts/` for layouts.
-
-Images can be placed in `src/images/`.
-
-Blog and documentation content are created as collections of Markdown or MDX files in `src/content`.
-
-Any static assets, eg. images, can be placed in the `public/` directory.
 
 ## Commands
 
-All commands are run from the root of the project, from a terminal:
+Run from the project root:
 
-| Command             | Action                                             |
-| :------------------ | :------------------------------------------------- |
-| `yarn`              | Installs dependencies                              |
-| `yarn dev`          | Starts local dev server at `localhost:3000`        |
-| `yarn build`        | Build your production site to `./dist/`            |
-| `yarn preview`      | Preview your build locally, before deploying       |
-| `yarn astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `yarn astro --help` | Get help using the Astro CLI                       |
-| `yarn test:e2e`     | Run Playwright tests                               |
+| Command          | Action                                       |
+| :--------------- | :------------------------------------------- |
+| `yarn`           | Install dependencies                         |
+| `yarn dev`       | Start dev server at `localhost:4321/palup.github.io/`         |
+| `yarn build`     | Build production site to `./dist/`           |
+| `yarn preview`   | Preview production build locally             |
 
-## Contributing
+## Deployment
 
-If you have any idea, suggestions or find any bugs, feel free to open a discussion, an issue or create a pull request.
-That would be very useful for all of us and we would be happy to listen and take action.
+Pushes to `main` automatically trigger the GitHub Actions workflow (`.github/workflows/astro.yml`), which builds the site with the correct `--base /palup.github.io/` path and deploys to GitHub Pages.
 
-## Credits
-
-Assets designed by (Freepik)[www.freepik.com].
+Images are processed at build time via Astro's `astro:assets` pipeline; converted to WebP with content-hashed filenames for correct path resolution on the subdirectory deployment.
