@@ -31,9 +31,71 @@ const { title = 'PalUp | UX Case Study' } = Astro.props as LayoutProps;
 			<Footer />
 		</div>
 		<style is:global>
-			img {
-				content-visibility: auto;
+			img { content-visibility: auto; }
+
+			/* Hero phone float */
+			@keyframes float {
+				0%, 100% { transform: translateY(0px); }
+				50%       { transform: translateY(-10px); }
+			}
+			.animate-float { animation: float 4s ease-in-out infinite; }
+
+			/* Scroll-reveal entrance animations */
+			@keyframes fadeInUp {
+				from { opacity: 0; transform: translateY(28px); }
+				to   { opacity: 1; transform: translateY(0); }
+			}
+			@keyframes fadeInLeft {
+				from { opacity: 0; transform: translateX(-28px); }
+				to   { opacity: 1; transform: translateX(0); }
+			}
+			@keyframes fadeInRight {
+				from { opacity: 0; transform: translateX(28px); }
+				to   { opacity: 1; transform: translateX(0); }
+			}
+			@keyframes scaleIn {
+				from { opacity: 0; transform: scale(0.5); }
+				to   { opacity: 1; transform: scale(1); }
+			}
+
+			[data-animate] { opacity: 0; }
+			[data-animate].in-view {
+				animation-fill-mode: both;
+				animation-duration: 0.65s;
+				animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			[data-animate="fade-up"].in-view    { animation-name: fadeInUp; }
+			[data-animate="fade-left"].in-view  { animation-name: fadeInLeft; }
+			[data-animate="fade-right"].in-view { animation-name: fadeInRight; }
+			[data-animate="scale-in"].in-view   { animation-name: scaleIn; }
+
+			/* Phone image hover scale in Design Process grids */
+			#process .grid figure img {
+				transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+				cursor: pointer;
+			}
+			#process .grid figure img:hover { transform: scale(1.06); }
+
+			@media (prefers-reduced-motion: reduce) {
+				[data-animate], .animate-float { opacity: 1 !important; animation: none !important; }
+				#process .grid figure img { transition: none; }
 			}
 		</style>
+		<script>
+			const obs = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							const el = entry.target as HTMLElement;
+							el.style.animationDelay = `${el.dataset.delay ?? 0}ms`;
+							el.classList.add('in-view');
+							obs.unobserve(el);
+						}
+					});
+				},
+				{ threshold: 0.12 }
+			);
+			document.querySelectorAll('[data-animate]').forEach((el) => obs.observe(el));
+		</script>
 	</body>
 </html>

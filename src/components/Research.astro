@@ -18,7 +18,7 @@
 	<div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-8">
 		<!-- Left: Affinity diagram + theme cards -->
 		<div class="flex flex-col gap-4 lg:w-1/2">
-			<figure>
+			<figure data-animate="fade-left">
 				<img
 					src="/images/palup/affinity_diagram.png"
 					alt="Affinity diagram clustering 6 major themes from interview data"
@@ -31,28 +31,28 @@
 			</figure>
 			<!-- Theme cards below diagram -->
 			<div class="grid grid-cols-2 gap-3">
-				<div class="rounded-xl border border-gray-100 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+				<div data-animate="fade-up" data-delay="0" class="rounded-xl border border-gray-100 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow dark:border-gray-800 dark:bg-gray-900">
 					<p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange">Theme 1</p>
 					<p class="mb-1 text-sm font-semibold text-black dark:text-white">Conversation &gt; Cuisine</p>
 					<p class="text-xs leading-relaxed text-gray-500">
 						Conversational fit was consistently prioritized over food preferences when evaluating potential companions.
 					</p>
 				</div>
-				<div class="rounded-xl border border-gray-100 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+				<div data-animate="fade-up" data-delay="100" class="rounded-xl border border-gray-100 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow dark:border-gray-800 dark:bg-gray-900">
 					<p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange">Theme 2</p>
 					<p class="mb-1 text-sm font-semibold text-black dark:text-white">Group Size Matters</p>
 					<p class="text-xs leading-relaxed text-gray-500">
 						4 people was cited as ideal — small enough to talk meaningfully, large enough to reduce awkward silences.
 					</p>
 				</div>
-				<div class="rounded-xl border border-gray-100 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+				<div data-animate="fade-up" data-delay="200" class="rounded-xl border border-gray-100 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow dark:border-gray-800 dark:bg-gray-900">
 					<p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange">Theme 3</p>
 					<p class="mb-1 text-sm font-semibold text-black dark:text-white">Safety Is a Prerequisite</p>
 					<p class="text-xs leading-relaxed text-gray-500">
 						Trust mechanisms were non-negotiable for female participants — safety was expected, not a bonus feature.
 					</p>
 				</div>
-				<div class="rounded-xl border border-gray-100 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+				<div data-animate="fade-up" data-delay="300" class="rounded-xl border border-gray-100 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow dark:border-gray-800 dark:bg-gray-900">
 					<p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange">Theme 4</p>
 					<p class="mb-1 text-sm font-semibold text-black dark:text-white">The Bad Cycle</p>
 					<p class="text-xs leading-relaxed text-gray-500">
@@ -63,7 +63,7 @@
 		</div>
 
 		<!-- Right: Persona image only -->
-		<div class="lg:w-1/2">
+		<div data-animate="fade-right" class="lg:w-1/2">
 			<img
 				src="/images/palup/persona.png"
 				alt="User persona card for Angela Zhang"
