@@ -22,18 +22,15 @@ const { title = 'PalUp | UX Case Study' } = Astro.props as LayoutProps;
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
 		<title>{title}</title>
 	</head>
-	<body
-		class="mx-auto max-w-screen-xl bg-white px-5 font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px]"
-	>
+	<body class="bg-white font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px]">
 		<Navbar />
-		<slot />
-		<Footer />
+		<div class="mx-auto max-w-screen-xl px-5">
+			<slot />
+			<Footer />
+		</div>
 		<style is:global>
-			/* Improve Page speed */
-			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */
 			img {
 				content-visibility: auto;
 			}

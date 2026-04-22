@@ -1,9 +1,9 @@
 ---
-import Button from '@components/ui/Button.astro';
 import ToggleTheme from '@components/ui/ToggleTheme.astro';
 import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
 
 const menuitems = [
+	{ title: 'Home', path: '#' },
 	{ title: 'Research', path: '#research' },
 	{ title: 'Design Process', path: '#process' },
 	{ title: 'Evaluation', path: '#evaluation' },
@@ -11,21 +11,21 @@ const menuitems = [
 ];
 ---
 
-<header data-testId="header" class="my-5 flex flex-col items-center justify-between lg:flex-row">
-	<Astronav>
-		<div class="flex w-full items-center justify-between lg:w-auto">
-			<a href="https://www.figma.com/proto/GHEjNtXC88rwqjANMyj82r/PalUp?node-id=628-2444&t=9MffpE68rPn1Mh8K-1" target="_blank" rel="noopener">
-				<Button size={'sm'} name="View Prototype">View Prototype</Button>
-			</a>
-			<div class="block lg:hidden">
-				<MenuIcon class="h-4 w-4 text-black dark:text-white" />
+<header
+	data-testId="header"
+	class="sticky top-0 z-50 bg-white/90 backdrop-blur dark:bg-black/90"
+>
+	<div class="mx-auto flex max-w-screen-xl items-center justify-between px-5 py-3">
+		<Astronav>
+			<div class="flex w-full items-center justify-between lg:w-auto">
+				<div class="block lg:hidden">
+					<MenuIcon class="h-4 w-4 text-black dark:text-white" />
+				</div>
 			</div>
-		</div>
-		<MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
-			<ul class="flex flex-col lg:flex-row lg:gap-3">
-				{
-					menuitems.map((item) => (
-						<>
+			<MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
+				<ul class="flex flex-col lg:flex-row lg:gap-3">
+					{
+						menuitems.map((item) => (
 							<li>
 								<a
 									aria-label="navigation link"
@@ -35,11 +35,11 @@ const menuitems = [
 									{item.title}
 								</a>
 							</li>
-						</>
-					))
-				}
-				<li><ToggleTheme /></li>
-			</ul>
-		</MenuItems>
-	</Astronav>
+						))
+					}
+					<li><ToggleTheme /></li>
+				</ul>
+			</MenuItems>
+		</Astronav>
+	</div>
 </header>
