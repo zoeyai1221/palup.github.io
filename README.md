@@ -1,103 +1,112 @@
-# Jekyll Serif Theme
+💫 This is a free template to make your portfolio website using **[Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**.
 
-Serif is a modern business theme for Jekyll. It contains multiple content types for a typical brochure/marketing website. The theme is fully responsive, blazing fast and artfully illustrated.
+### Dark mode
+![Dark mode](https://github.com/veranikabarel/astro-portfolio/assets/48052206/240ab82d-8896-412e-8f52-5cf10d42b1db)
+### Light mode
+![Light mode](https://github.com/veranikabarel/astro-portfolio/assets/48052206/bfa88b30-6dcf-4d5f-bf28-efc3caa27d0f)
+### Lighthouse report
+![Lighthouse report](https://github.com/veranikabarel/astro-portfolio/assets/48052206/e7ad23a4-1a9b-477e-a13e-a321ce6bd3d6)
 
-[Live Demo](https://jekyll-serif.netlify.app/) |
-[Zerostatic Themes](https://www.zerostatic.io)
+## Table of Contents
 
-<a href="https://www.buymeacoffee.com/zerostatic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+- [Demo](#demo)
+- [Features](#features)
+- [Project structure](#project-structure)
+- [Commands](#commands)
+- [Contributing](#contributing)
+- [Credits](#credits)
 
-![Jekyll Serif Theme screenshot](https://www.zerostatic.io/theme/jekyll-serif/jekyll-serif-screenshot.png)
+## Demo
 
-### Theme features
+📌 [https://astro-fe-portfolio.netlify.app/](https://astro-fe-portfolio.netlify.app/)
 
-- Jekyll 4.2+
-- Netlify & Github Pages ready
-- Services (Collection)
-- Team (Collection)
-- Features (Data)
-- SCSS
-- 100% Responsive design, animated hamburger and mobile slide in menu
-- Bootstrap 4.6 - _Only the bootstrap grid and utilites are imported by default. If you want to use more of the Boostrap library you can uncomment the `@import` in `style.scss`_
-- 100/100 Google Lighthouse speed score
-- 100/100 Google Lighthouse seo score
-- 100/100 Google Lighthouse accessibility score
-- 100/100 Google Lighthouse best practices score
-- Under 50KB without images or 80KB with images and illustrations ⚡
-- Under 20KB without Google fonts ⚡⚡⚡
-- Robust example content included
-- Royalty free illustrations included
+## Features
 
-## Installation
+✔️ Integration with **Tailwind CSS** ([@astrojs/tailwind](https://docs.astro.build/en/guides/integrations-guide/tailwind/)) supporting **Dark mode**.
 
-### Installing Ruby & Jekyll
+✔️ Uses the following integrations:
 
-If this is your first time using Jekyll, please follow the [Jekyll docs](https://jekyllrb.com/docs/installation/) and make sure your local environment (including Ruby) is setup correctly.
+- @astrojs/mdx
+- @astrojs/image
+- @astrojs/tailwind - with prettier class sorting plugin
+- @astro-icon
+- @astro-seo
+- @astro-navbar
 
-### Installing Theme
+✔️([@Playwright](https://github.com/microsoft/playwright)) e2e tests are setted up.
 
-Download or clone the theme.
+🔜 Blog with frontmatter (title, description, author, date, image, tags) and RSS feed, sitemap and robots.txt
 
-To run the theme locally, navigate to the theme directory and run:
+🔜 404 error page
 
-```
-bundle install
-```
+## Project Structure
 
-To start the Jekyll local development server.
+Inside of your Astro project, you'll see the following folders and files:
 
 ```
-bundle exec jekyll serve
+/
+├── public/
+│   └── favicon.ico
+|   ├── hero.png
+|   └── ...
+├── src/
+|   ├── assets/
+|   |   ├── images/
+│   │   |   ├── hero.png
+|   |   |   └── ...
+│   ├── components/
+│   │   ├── ui/
+│   │   |   ├── BackToTop.astro
+|   |   |   └── ...
+│   │   ├── About.astro
+│   │   ├── Contact.astro
+|   |   └── ...
+│   ├── content/
+│   │   ├── projects/
+│   │   │   ├── project-1.md
+│   │   │   ├── project-1.md
+│   │   │   └── ...
+│   │   └-- config.ts
+│   ├── layouts/
+│   │   ├── Layout.astro
+│   ├── pages/
+│   │   ├── index.astro
+│   ├── tests/
+│   │   ├── index.spec.ts
+├── package.json
+├── astro.config.mjs
+└── ...
 ```
 
-To build the theme.
+Astro looks for `.astro`, `.md` or `.mdx` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-```
-bundle exec jekyll build
-```
+`src/components/` is where we put any Astro components and similarly `src/layouts/` for layouts.
 
-## Deployment
+Images can be placed in `src/images/`.
 
-### Netlify
+Blog and documentation content are created as collections of Markdown or MDX files in `src/content`.
 
-Use Netlify to deploy this theme. This theme contains a valid and tested `netlify.toml` - Feel free to use the 1-click deploy below.
+Any static assets, eg. images, can be placed in the `public/` directory.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/jekyll-serif-theme)
+## Commands
 
-### Github Pages
+All commands are run from the root of the project, from a terminal:
 
-This theme has been tested to work with Github Pages (and Github Project Pages). When using Github Pages you will need to update the `baseurl` in the `_config.yml` otherwise all the css, images and paths will be broken.
+| Command             | Action                                             |
+| :------------------ | :------------------------------------------------- |
+| `yarn`              | Installs dependencies                              |
+| `yarn dev`          | Starts local dev server at `localhost:3000`        |
+| `yarn build`        | Build your production site to `./dist/`            |
+| `yarn preview`      | Preview your build locally, before deploying       |
+| `yarn astro ...`    | Run CLI commands like `astro add`, `astro preview` |
+| `yarn astro --help` | Get help using the Astro CLI                       |
+| `yarn test:e2e`     | Run Playwright tests                               |
 
-For example the site https://zerostaticthemes.github.io/jekyll-serif-theme would have `baseurl: "/jekyll-serif-theme/"`
+## Contributing
 
-## Extras
+If you have any idea, suggestions or find any bugs, feel free to open a discussion, an issue or create a pull request.
+That would be very useful for all of us and we would be happy to listen and take action.
 
-### License
+## Credits
 
-- You cannot create ports of this theme
-- You cannot re-sell this theme
-
-### Credits
-
-- Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
-- Stock images by Unsplash - https://unsplash.com/
-- Feature icons by Noun Project - https://thenounproject.com/
-
-## Support My Work
-
-I've been building open source themes for all the main static site generators for over 4 years now. My premium themes allow me to continue to allocate time to maintain, improve and build new open source themes.
-
-1. Leave a star ⭐🙏🏻
-2. Make a contribution to this theme, add a feature, fix a bug, nothing is to small 
-2. Mention this theme on twitter [@zerostaticio](https://twitter.com/zerostaticio) 📢
-3. Purchase a premium theme 🔥
-
-### All Jekyll Themes by Zerostatic
-
-- [Jekyll Serif (Open Source)](https://www.zerostatic.io/theme/jekyll-serif/)
-- [Jekyll Atlantic (Open Source)](https://www.zerostatic.io/theme/jekyll-atlantic/)
-- [Jekyll Advance (Premium)](https://www.zerostatic.io/theme/jekyll-advance/)
-- [Jekyll Origin (Premium)](https://www.zerostatic.io/theme/jekyll-origin/)
-- [Jekyll Curate (Premium)](https://www.zerostatic.io/theme/jekyll-curate/)
-
-🇦🇺 **Made in Australia** by Robert Austin
+Assets designed by (Freepik)[www.freepik.com].
