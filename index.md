@@ -4,8 +4,11 @@
 > A mobile app that connects people for shared dining experiences in a new city.
 
 **Role:** UX Researcher & Interaction Designer
+
 **Team:** Siyu (Zoey) Ai, Karena Ma, Suiyang Mai, Xinran Wang
+
 **Timeline:** January – April 2026
+
 **Tools:** Figma, Affinity Diagramming, Semi-structured Interviews
 
 ---
@@ -58,6 +61,8 @@ We sketched four core task flows: managing a profile, finding and joining an eve
 
 **[PLACEHOLDER: Paper prototype photo — Create Event flow]**
 **[PLACEHOLDER: Paper prototype photo — Chatroom / View Events flow]**
+**[PLACEHOLDER: Paper prototype photo - before eval]**
+**[PLACEHOLDER: Paper prototype photo - after eval]**
 
 A cross-team heuristic evaluation surfaced 12 issues. The most severe:
 - No send button visible in the chat interface
@@ -76,6 +81,7 @@ We moved into Figma and connected all flows into an interactive prototype. Major
 
 **[PLACEHOLDER: Figma wireframe screenshot — Home + Create Event screens]**
 **[PLACEHOLDER: Figma wireframe screenshot — Chatroom screen]**
+**[PLACEHOLDER: Figma wireframe screenshot — Login error screen]**
 
 ---
 
@@ -110,7 +116,7 @@ A second round of user testing and expert critique pushed the design further. Ke
 
 **[PLACEHOLDER: HF prototype screenshot — Home screen]**
 **[PLACEHOLDER: HF prototype screenshot — Create Event flow]**
-**[PLACEHOLDER: HF prototype screenshot — Event detail page]**
+**[PLACEHOLDER: HF prototype screenshot — My Event page]**
 **[PLACEHOLDER: HF prototype screenshot — Chatroom with pinned notice]**
 **[PLACEHOLDER: HF prototype screenshot — Profile page]**
 
