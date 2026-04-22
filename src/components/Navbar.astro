@@ -4,25 +4,19 @@ import ToggleTheme from '@components/ui/ToggleTheme.astro';
 import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
 
 const menuitems = [
-	{
-		title: 'About',
-		path: '#about',
-	},
-	{
-		title: 'Projects',
-		path: '#projects',
-	},
-	{
-		title: 'Contact',
-		path: '#contact',
-	},
+	{ title: 'Research', path: '#research' },
+	{ title: 'Design Process', path: '#process' },
+	{ title: 'Evaluation', path: '#evaluation' },
+	{ title: 'Reflection', path: '#reflection' },
 ];
 ---
 
 <header data-testId="header" class="my-5 flex flex-col items-center justify-between lg:flex-row">
 	<Astronav>
 		<div class="flex w-full items-center justify-between lg:w-auto">
-			<Button size={'sm'} name="Download CV">Download CV</Button>
+			<a href="https://www.figma.com/proto/GHEjNtXC88rwqjANMyj82r/PalUp?node-id=628-2444&t=9MffpE68rPn1Mh8K-1" target="_blank" rel="noopener">
+				<Button size={'sm'} name="View Prototype">View Prototype</Button>
+			</a>
 			<div class="block lg:hidden">
 				<MenuIcon class="h-4 w-4 text-black dark:text-white" />
 			</div>

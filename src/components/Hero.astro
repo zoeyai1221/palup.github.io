@@ -1,31 +1,56 @@
 ---
-import heroImage from '@assets/images/hero.png';
 import Button from '@components/ui/Button.astro';
-import { Image } from 'astro:assets';
 ---
 
 <section
 	data-testid="hero"
-	class="flex h-screen flex-col-reverse items-center justify-center text-center lg:flex-row"
+	class="flex min-h-screen flex-col-reverse items-center justify-center gap-12 py-16 lg:flex-row lg:gap-20"
 >
-	<div class="mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2">
-		<div>
-			<h1 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
-				Hi! My name is <span class="text-orange">Jane Doe</span> and I am a web developer based in New
-				York.
-			</h1>
+	<div class="flex flex-col items-start lg:w-1/2">
+		<p class="mb-3 font-monospace text-sm uppercase tracking-widest text-orange">UX Case Study</p>
+		<h1 class="mb-4 font-monospace text-5xl font-bold text-black dark:text-white lg:text-7xl">
+			PalUp
+		</h1>
+		<p class="mb-6 text-xl text-black dark:text-white lg:text-2xl">
+			Finding your next meal companion — one conversation at a time.
+		</p>
+		<p class="mb-8 text-base text-black dark:text-white opacity-70">
+			A mobile app that connects people for shared dining experiences in a new city.
+		</p>
+
+		<div class="mb-8 grid grid-cols-2 gap-4 text-sm text-black dark:text-white">
+			<div>
+				<p class="font-bold text-orange">Role</p>
+				<p>UX Researcher &amp; Interaction Designer</p>
+			</div>
+			<div>
+				<p class="font-bold text-orange">Timeline</p>
+				<p>January – April 2026</p>
+			</div>
+			<div>
+				<p class="font-bold text-orange">Team</p>
+				<p>Siyu (Zoey) Ai, Karena Ma,<br />Suiyang Mai, Xinran Wang</p>
+			</div>
+			<div>
+				<p class="font-bold text-orange">Tools</p>
+				<p>Figma, Affinity Diagramming,<br />Semi-structured Interviews</p>
+			</div>
 		</div>
-		<div class="mb-10">
-			<Button style={'primary'} size={'lg'} class={'flex'} name="learn more">Learn more</Button>
-		</div>
+
+		<a
+			href="https://www.figma.com/proto/GHEjNtXC88rwqjANMyj82r/PalUp?node-id=628-2444&t=9MffpE68rPn1Mh8K-1"
+			target="_blank"
+			rel="noopener"
+		>
+			<Button style={'primary'} size={'lg'} name="View Prototype">View Interactive Prototype →</Button>
+		</a>
 	</div>
-	<div data-testid="hero-img" class="mb-10 flex w-1/2 items-center justify-center">
-		<Image
-			src={heroImage}
-			alt="Coding girl"
-			format="png"
-			width={600}
-			height={600}
+
+	<div class="flex w-full items-center justify-center lg:w-1/2">
+		<img
+			src="/images/palup/high_fi_homescreen.png"
+			alt="PalUp homescreen — high fidelity prototype"
+			class="max-h-[520px] w-auto rounded-3xl shadow-2xl"
 			loading="eager"
 		/>
 	</div>

@@ -1,0 +1,264 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth" data-testid="html"> <head><title>PalUp — UX Case Study</title><link rel="canonical" href="http://localhost:4321/"><meta name="description" content="A UX case study for PalUp, a mobile app connecting people for shared dining experiences in a new city."><meta name="robots" content="index, follow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="generator" content="Astro v4.16.19"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>PalUp | UX Case Study</title><link rel="stylesheet" href="/_astro/index.Rr18_hzB.css"><script type="module">let t=document.getElementById("btn-back-to-top");window.onscroll=function(e){e.preventDefault(),c()};function c(){document.body.scrollTop>20||document.documentElement.scrollTop>20?t.style.display="block":t.style.display="none"}t.addEventListener("click",l);function l(e){e.preventDefault(),document.body.scrollTop=0,document.documentElement.scrollTop=0}document.addEventListener("DOMContentLoaded",function(){const n=document.querySelector('.theme-switch input[type="checkbox"]'),o=()=>{document.documentElement.classList.toggle("dark"),document.documentElement.classList.contains("dark")&&localStorage.setItem("theme","dark")};(localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&o(),n.addEventListener("click",()=>{o()})});
+</script></head> <body class="mx-auto max-w-screen-xl bg-white px-5 font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px]"> <header data-testId="header" class="my-5 flex flex-col items-center justify-between lg:flex-row">  <div class="flex w-full items-center justify-between lg:w-auto"> <a href="https://www.figma.com/proto/GHEjNtXC88rwqjANMyj82r/PalUp?node-id=628-2444&t=9MffpE68rPn1Mh8K-1" target="_blank" rel="noopener"> <button name="View Prototype" class="rounded-xl text-center transition focus-visible:ring-2 ring-offset-2 ring-orange px-4 py-1.5 bg-black text-white hover:bg-orange  border-2 border-transparent">View Prototype </button> </a> <div class="block lg:hidden"> <button id="astronav-menu" aria-label="Toggle Menu">  <svg fill="currentColor" class="h-4 w-4 text-black dark:text-white" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <title>Toggle Menu</title> <path class="astronav-close-icon astronav-toggle hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"></path> <path class="astronav-open-icon astronav-toggle" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"></path> </svg>  </button> </div> </div> <nav class="astronav-items astronav-toggle mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">  <ul class="flex flex-col lg:flex-row lg:gap-3">  <li> <a aria-label="navigation link" href="#research" class="flex py-2 text-black hover:text-orange dark:text-white dark:hover:text-orange lg:px-3"> Research </a> </li>  <li> <a aria-label="navigation link" href="#process" class="flex py-2 text-black hover:text-orange dark:text-white dark:hover:text-orange lg:px-3"> Design Process </a> </li>  <li> <a aria-label="navigation link" href="#evaluation" class="flex py-2 text-black hover:text-orange dark:text-white dark:hover:text-orange lg:px-3"> Evaluation </a> </li>  <li> <a aria-label="navigation link" href="#reflection" class="flex py-2 text-black hover:text-orange dark:text-white dark:hover:text-orange lg:px-3"> Reflection </a> </li>  <li><div class="theme-switch-wrapper md:flex md:items-center" data-astro-cid-ngcsdc2w> <label data-testid="theme-switch" class="theme-switch relative inline-block h-[34px] w-[60px]" for="checkbox" data-astro-cid-ngcsdc2w> <input type="checkbox" id="checkbox" class="hidden" data-astro-cid-ngcsdc2w> <div class="slider absolute bottom-0 left-0 right-0 top-0 cursor-pointer rounded-full bg-black before:absolute before:bottom-[4px] before:left-[4px] before:h-[26px] before:w-[26px] before:rounded-full before:bg-orange before:transition-[0.4s] dark:bg-white" data-astro-cid-ngcsdc2w> <circle cx="12" cy="12" r="5" data-astro-cid-ngcsdc2w></circle> <line x1="12" y1="1" x2="12" y2="3" data-astro-cid-ngcsdc2w></line> <line x1="12" y1="21" x2="12" y2="23" data-astro-cid-ngcsdc2w></line> <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" data-astro-cid-ngcsdc2w></line> <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" data-astro-cid-ngcsdc2w></line> <line x1="1" y1="12" x2="3" y2="12" data-astro-cid-ngcsdc2w></line> <line x1="21" y1="12" x2="23" y2="12" data-astro-cid-ngcsdc2w></line> <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" data-astro-cid-ngcsdc2w></line> <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" data-astro-cid-ngcsdc2w></line> </div> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" data-astro-cid-ngcsdc2w></path> </label> </div>  </li> </ul>  </nav>  <script>(function(){const closeOnClick = false;
+
+["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+  document.addEventListener(event, addListeners);
+});
+
+// Function to clone and replace elements
+function cloneAndReplace(element) {
+  const clone = element.cloneNode(true);
+  element.parentNode.replaceChild(clone, element);
+}
+
+function addListeners() {
+  // Clean up existing listeners
+  const oldMenuButton = document.getElementById("astronav-menu");
+  if (oldMenuButton) {
+    cloneAndReplace(oldMenuButton);
+  }
+
+  const oldDropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  oldDropdownMenus.forEach((menu) => {
+    cloneAndReplace(menu);
+  });
+
+  // Mobile nav toggle
+  const menuButton = document.getElementById("astronav-menu");
+  menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+  // Dropdown menus
+  const dropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  dropdownMenus.forEach((menu) => {
+    const button = menu.querySelector("button");
+    button &&
+      button.addEventListener("click", (event) =>
+        toggleDropdownMenu(event, menu, dropdownMenus)
+      );
+
+    // Handle Submenu Dropdowns
+    const dropDownSubmenus = menu.querySelectorAll(
+      ".astronav-dropdown-submenu"
+    );
+
+    dropDownSubmenus.forEach((submenu) => {
+      const submenuButton = submenu.querySelector("button");
+      submenuButton &&
+        submenuButton.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleSubmenuDropdown(event, submenu);
+        });
+    });
+  });
+
+  // Clicking away from dropdown will remove the dropdown class
+  document.addEventListener("click", closeAllDropdowns);
+
+  if (closeOnClick) {
+    handleCloseOnClick();
+  }
+}
+
+function toggleMobileNav() {
+  [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+    el.classList.toggle("hidden");
+  });
+}
+
+function toggleDropdownMenu(event, menu, dropdownMenus) {
+  toggleMenu(menu);
+
+  // Close one dropdown when selecting another
+  Array.from(dropdownMenus)
+    .filter((el) => el !== menu && !menu.contains(el))
+    .forEach(closeMenu);
+
+  event.stopPropagation();
+}
+
+function toggleSubmenuDropdown(event, submenu) {
+  event.stopPropagation();
+  toggleMenu(submenu);
+
+  // Close sibling submenus at the same nesting level
+  const siblingSubmenus = submenu
+    .closest(".astronav-dropdown")
+    .querySelectorAll(".astronav-dropdown-submenu");
+  Array.from(siblingSubmenus)
+    .filter((el) => el !== submenu && !submenu.contains(el))
+    .forEach(closeMenu);
+}
+
+function closeAllDropdowns(event) {
+  const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
+  const dropdownParent = document.querySelectorAll(
+    ".astronav-dropdown, .astronav-dropdown-submenu"
+  );
+  const isButtonInsideDropdown = [
+    ...document.querySelectorAll(
+      `.astronav-dropdown button, .astronav-dropdown label, .astronav-dropdown input,
+	  .astronav-dropdown-submenu button, .astronav-dropdown-submenu label, .astronav-dropdown-submenu input,
+	  #astronav-menu`
+    ),
+  ].some((button) => button.contains(event.target));
+  if (!isButtonInsideDropdown) {
+    dropdownMenus.forEach((d) => {
+      // console.log("I ran", d);
+      // if (!d.contains(event.target)) {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.classList.add("hidden");
+      // }
+    });
+    dropdownParent.forEach((d) => {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.setAttribute("aria-expanded", "false");
+    });
+  }
+}
+
+function toggleMenu(menu) {
+  menu.classList.toggle("open");
+  const expanded = menu.getAttribute("aria-expanded") === "true";
+  menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+  menu.hasAttribute("open")
+    ? menu.removeAttribute("open")
+    : menu.setAttribute("open", "");
+
+  const dropdownToggle = menu.querySelector(".dropdown-toggle");
+  const dropdownExpanded = dropdownToggle.getAttribute("aria-expanded");
+  dropdownToggle.classList.toggle("hidden");
+  dropdownToggle.setAttribute(
+    "aria-expanded",
+    dropdownExpanded === "true" ? "false" : "true"
+  );
+}
+
+function closeMenu(menu) {
+  // console.log("closing", menu);
+  menu.classList.remove("open");
+  menu.removeAttribute("open");
+  menu.setAttribute("aria-expanded", "false");
+  const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+}
+
+function handleCloseOnClick() {
+  const navMenuItems = document.querySelector(".astronav-items");
+  const navToggle = document.getElementById("astronav-menu");
+  const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
+
+  const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
+
+  navLink &&
+    navLink.forEach((item) => {
+      item.addEventListener("click", () => {
+        navMenuItems?.classList.add("hidden");
+        MenuIcons.forEach((el) => {
+          el.classList.toggle("hidden");
+        });
+      });
+    });
+}
+})();</script> </header>  <main> <section data-testid="hero" class="flex min-h-screen flex-col-reverse items-center justify-center gap-12 py-16 lg:flex-row lg:gap-20"> <div class="flex flex-col items-start lg:w-1/2"> <p class="mb-3 font-monospace text-sm uppercase tracking-widest text-orange">UX Case Study</p> <h1 class="mb-4 font-monospace text-5xl font-bold text-black dark:text-white lg:text-7xl">
+PalUp
+</h1> <p class="mb-6 text-xl text-black dark:text-white lg:text-2xl">
+Finding your next meal companion — one conversation at a time.
+</p> <p class="mb-8 text-base text-black dark:text-white opacity-70">
+A mobile app that connects people for shared dining experiences in a new city.
+</p> <div class="mb-8 grid grid-cols-2 gap-4 text-sm text-black dark:text-white"> <div> <p class="font-bold text-orange">Role</p> <p>UX Researcher &amp; Interaction Designer</p> </div> <div> <p class="font-bold text-orange">Timeline</p> <p>January – April 2026</p> </div> <div> <p class="font-bold text-orange">Team</p> <p>Siyu (Zoey) Ai, Karena Ma,<br>Suiyang Mai, Xinran Wang</p> </div> <div> <p class="font-bold text-orange">Tools</p> <p>Figma, Affinity Diagramming,<br>Semi-structured Interviews</p> </div> </div> <a href="https://www.figma.com/proto/GHEjNtXC88rwqjANMyj82r/PalUp?node-id=628-2444&t=9MffpE68rPn1Mh8K-1" target="_blank" rel="noopener"> <button name="View Prototype" class="rounded-xl text-center transition focus-visible:ring-2 ring-offset-2 ring-orange px-6 py-3 bg-black text-white hover:bg-orange  border-2 border-transparent">View Interactive Prototype → </button> </a> </div> <div class="flex w-full items-center justify-center lg:w-1/2"> <img src="/images/palup/high_fi_homescreen.png" alt="PalUp homescreen — high fidelity prototype" class="max-h-[520px] w-auto rounded-3xl shadow-2xl" loading="eager"> </div> </section> <section data-testid="about" id="problem" class="flex flex-col items-start justify-center py-20 lg:py-32"> <h2 class="mb-2 font-monospace text-2xl text-orange lg:text-4xl">The Problem</h2> <span class="mb-8 h-1 w-10 bg-orange"></span> <div class="max-w-2xl text-black dark:text-white"> <p class="mb-6 text-lg leading-relaxed">
+Moving to a new city means eating alone — a lot. Communal dishes like hotpot and dim sum lose
+			their appeal without company. Existing platforms like Meetup handle large events, but nothing
+			exists for the simple, recurring need: finding one to three people to share a meal with.
+</p> <blockquote class="border-l-4 border-orange pl-5 py-2 text-xl font-semibold italic text-black dark:text-white">
+"People don't want a dining companion who likes the same food. They want someone they can
+			actually talk to."
+<span class="mt-2 block text-sm font-normal not-italic text-orange">
+— Core insight from user research
+</span> </blockquote> </div> </section> <section data-testid="research" id="research" class="flex flex-col items-start justify-center py-20 lg:py-32"> <h2 class="mb-2 font-monospace text-2xl text-orange lg:text-4xl">Research</h2> <span class="mb-8 h-1 w-10 bg-orange"></span> <p class="mb-10 max-w-2xl text-lg text-black dark:text-white leading-relaxed">
+We conducted <strong>8 semi-structured interviews</strong> with Chinese immigrants living in Seattle
+		(1–10 years in the US), recruited from personal networks. Sessions were in-person and via Zoom.
+		Participants ranged in age and gender, each living alone or with limited social networks.
+</p> <div class="mb-12 w-full"> <img src="/images/palup/affinity_diagram.png" alt="Affinity diagram clustering 6 major themes from interview data" class="w-full rounded-2xl shadow-lg" loading="lazy"> <p class="mt-3 text-center text-sm text-black dark:text-white opacity-60">
+Affinity diagram clustering 6 major themes from interview data
+</p> </div> <div class="mb-12 w-full"> <img src="/images/palup/persona.png" alt="User persona — Angela Zhang" class="w-full rounded-2xl shadow-lg" loading="lazy"> <p class="mt-3 text-center text-sm text-black dark:text-white opacity-60">
+User persona: Angela, 28 — Software Engineer, Seattle
+</p> </div> <h3 class="mb-6 font-monospace text-xl font-bold text-black dark:text-white lg:text-2xl">
+Key Themes
+</h3> <div class="grid w-full gap-6 md:grid-cols-2"> <div class="rounded-xl border border-orange/20 bg-white p-6 shadow dark:bg-black"> <p class="mb-2 font-bold text-orange">Conversation &gt; Cuisine</p> <p class="text-sm text-black dark:text-white leading-relaxed">
+Participants consistently prioritized conversational fit over food preferences when evaluating
+				potential dining companions.
+</p> </div> <div class="rounded-xl border border-orange/20 bg-white p-6 shadow dark:bg-black"> <p class="mb-2 font-bold text-orange">Group Size Matters</p> <p class="text-sm text-black dark:text-white leading-relaxed">
+4 people was cited as ideal: small enough to talk meaningfully, large enough to reduce
+				awkward silences.
+</p> </div> <div class="rounded-xl border border-orange/20 bg-white p-6 shadow dark:bg-black"> <p class="mb-2 font-bold text-orange">Safety Is a Prerequisite</p> <p class="text-sm text-black dark:text-white leading-relaxed">
+Especially for female participants, trust mechanisms were non-negotiable — not a bonus
+				feature.
+</p> </div> <div class="rounded-xl border border-orange/20 bg-white p-6 shadow dark:bg-black"> <p class="mb-2 font-bold text-orange">The Bad Cycle</p> <p class="text-sm text-black dark:text-white leading-relaxed">
+Fewer friends → less dining out → harder to meet people. A self-reinforcing loop the app
+				needed to break.
+</p> </div> </div> </section> <section data-testid="process" id="process" class="flex flex-col items-start justify-center py-20 lg:py-32"> <h2 class="mb-2 font-monospace text-2xl text-orange lg:text-4xl">Design Process</h2> <span class="mb-8 h-1 w-10 bg-orange"></span> <p class="mb-10 max-w-2xl text-lg text-black dark:text-white leading-relaxed">
+Four iterative phases, each building directly on what we learned.
+</p> <div class="mb-14 w-full"> <img src="/images/palup/process_timeline_diagram.png" alt="Design process timeline: Research → Sketch → Wireframe → Prototype" class="w-full rounded-2xl shadow-lg" loading="lazy"> <p class="mt-3 text-center text-sm text-black dark:text-white opacity-60">
+Process timeline: Research → Paper Prototype → Wireframes → Medium-Fi → High-Fi
+</p> </div> <!-- Phase 1 --> <div class="mb-20 w-full"> <div class="mb-4 flex items-center gap-4"> <span class="flex h-10 w-10 items-center justify-center rounded-full bg-orange font-bold text-white">1</span> <h3 class="font-monospace text-xl font-bold text-black dark:text-white lg:text-2xl">
+Paper Prototype
+</h3> </div> <p class="mb-6 max-w-2xl text-base text-black dark:text-white leading-relaxed">
+We sketched four core task flows: managing a profile, finding and joining an event, creating an
+			event, and chatting with participants. A cross-team heuristic evaluation surfaced 12 issues.
+</p> <div class="mb-4 rounded-xl bg-orange/5 border border-orange/20 p-5 dark:bg-orange/10"> <p class="mb-2 font-semibold text-orange">Most severe issues found:</p> <ul class="list-disc pl-5 text-sm text-black dark:text-white space-y-1"> <li>No send button visible in the chat interface</li> <li>No way to leave a chatroom</li> <li>Event creation and home browsing shared the same screen — users didn't know which mode they were in</li> </ul> </div> <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"> <figure> <img src="/images/palup/paper_prototype_before_eval_create_event.jpg" alt="Paper prototype — Create Event flow before evaluation" class="w-full rounded-xl shadow" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Create Event — before eval</figcaption> </figure> <figure> <img src="/images/palup/paper_prototype_before_eval_view_event_chatroom.jpg" alt="Paper prototype — Chatroom before evaluation" class="w-full rounded-xl shadow" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Chatroom — before eval</figcaption> </figure> <figure> <img src="/images/palup/paper_prototype_before_eval_profile.jpg" alt="Paper prototype — Profile before evaluation" class="w-full rounded-xl shadow" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Profile — before eval</figcaption> </figure> <figure> <img src="/images/palup/paper_prototype_after_eval_create_event.jpg" alt="Paper prototype — Create Event after evaluation" class="w-full rounded-xl shadow" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Create Event — after eval</figcaption> </figure> <figure> <img src="/images/palup/paper_prototype_after_eval_chatroom.png" alt="Paper prototype — Chatroom after evaluation" class="w-full rounded-xl shadow" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Chatroom — after eval</figcaption> </figure> <figure> <img src="/images/palup/paper_prototype_after_eval_profile.png" alt="Paper prototype — Profile after evaluation" class="w-full rounded-xl shadow" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Profile — after eval</figcaption> </figure> </div> <div class="mt-4 grid gap-4 sm:grid-cols-2"> <figure> <img src="/images/palup/paper_prototype_after_eval_join_event_1.jpg" alt="Paper prototype — Join Event after evaluation" class="w-full rounded-xl shadow" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Join Event — after eval</figcaption> </figure> <figure> <img src="/images/palup/paper_prototype_after_eval_setting.png" alt="Paper prototype — Settings after evaluation" class="w-full rounded-xl shadow" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Settings — after eval</figcaption> </figure> </div> </div> <!-- Phase 2 --> <div class="mb-20 w-full"> <div class="mb-4 flex items-center gap-4"> <span class="flex h-10 w-10 items-center justify-center rounded-full bg-orange font-bold text-white">2</span> <h3 class="font-monospace text-xl font-bold text-black dark:text-white lg:text-2xl">
+Wireframes — Low Fidelity
+</h3> </div> <p class="mb-6 max-w-2xl text-base text-black dark:text-white leading-relaxed">
+We moved into Figma and connected all flows into an interactive prototype, applying fixes from
+			the heuristic evaluation.
+</p> <div class="mb-4 rounded-xl bg-orange/5 border border-orange/20 p-5 dark:bg-orange/10"> <p class="mb-2 font-semibold text-orange">Major fixes applied:</p> <ul class="list-disc pl-5 text-sm text-black dark:text-white space-y-1"> <li>Added a floating "+" button as a dedicated event creation trigger</li> <li>Added error states to the login flow</li> <li>Separated browsing and creating into distinct screens</li> </ul> </div> <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"> <figure> <img src="/images/palup/figma_wireframe_screenshot_home.png" alt="Figma wireframe — Home screen" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Home screen</figcaption> </figure> <figure> <img src="/images/palup/figma_wireframe_screenshot_create_event_preference.png" alt="Figma wireframe — Create Event preferences" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Create Event — preferences</figcaption> </figure> <figure> <img src="/images/palup/figma_wireframe_screenshot_create_event_preview.png" alt="Figma wireframe — Create Event preview" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Create Event — preview</figcaption> </figure> <figure> <img src="/images/palup/figma_wireframe_screenshot_create_event_posted.png" alt="Figma wireframe — Event posted confirmation" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Event posted</figcaption> </figure> <figure> <img src="/images/palup/figma_wireframe_screenshot_chatroom.png" alt="Figma wireframe — Chatroom" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Chatroom</figcaption> </figure> <figure> <img src="/images/palup/figma_wireframe_screenshot_login_error.png" alt="Figma wireframe — Login error state" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Login error state</figcaption> </figure> </div> <div class="mt-4 grid gap-4 sm:grid-cols-2"> <figure> <img src="/images/palup/first_round_heuristic_eval_chatroom.png" alt="First round heuristic evaluation — Chatroom issues" class="w-full rounded-xl shadow" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Heuristic eval — chatroom issues</figcaption> </figure> <figure> <img src="/images/palup/first_round_heuristic_eval_create_event_profile.jpg" alt="First round heuristic evaluation — Create Event & Profile issues" class="w-full rounded-xl shadow" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Heuristic eval — create event &amp; profile</figcaption> </figure> </div> </div> <!-- Phase 3 --> <div class="mb-20 w-full"> <div class="mb-4 flex items-center gap-4"> <span class="flex h-10 w-10 items-center justify-center rounded-full bg-orange font-bold text-white">3</span> <h3 class="font-monospace text-xl font-bold text-black dark:text-white lg:text-2xl">
+Medium-Fidelity Prototype
+</h3> </div> <p class="mb-6 max-w-2xl text-base text-black dark:text-white leading-relaxed">
+User testing with 4–5 participants revealed two persistent issues in the Create Event flow.
+</p> <div class="mb-6 rounded-xl bg-orange/5 border border-orange/20 p-5 dark:bg-orange/10"> <p class="mb-2 font-semibold text-orange">Issues found &amp; fixes applied:</p> <ul class="list-disc pl-5 text-sm text-black dark:text-white space-y-1"> <li>Newly posted events on the Home screen weren't tappable → <strong>all event cards made tappable across every screen</strong></li> <li>The "Vibe" label confused participants → <strong>renamed to "Dining Atmosphere"</strong> (Quiet Meal / Casual Hangout / Deep Conversation)</li> </ul> </div> <div class="grid gap-4 sm:grid-cols-2"> <figure> <img src="/images/palup/medium_fi_create_event_preferences.png" alt="Medium-fi — Create Event preferences screen" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Create Event — preferences</figcaption> </figure> <figure> <img src="/images/palup/medium_fi_tappable_card.png" alt="Medium-fi — Tappable event card" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Tappable event card</figcaption> </figure> </div> </div> <!-- Phase 4 --> <div class="mb-4 w-full"> <div class="mb-4 flex items-center gap-4"> <span class="flex h-10 w-10 items-center justify-center rounded-full bg-orange font-bold text-white">4</span> <h3 class="font-monospace text-xl font-bold text-black dark:text-white lg:text-2xl">
+High-Fidelity Prototype
+</h3> </div> <p class="mb-6 max-w-2xl text-base text-black dark:text-white leading-relaxed">
+A second round of user testing and expert critique pushed the design further.
+</p> <div class="mb-8 overflow-x-auto rounded-xl border border-orange/20"> <table class="w-full text-sm text-black dark:text-white"> <thead> <tr class="bg-orange/10"> <th class="px-4 py-3 text-left font-semibold text-orange">Issue Found</th> <th class="px-4 py-3 text-left font-semibold text-orange">Fix Applied</th> </tr> </thead> <tbody> <tr class="border-t border-orange/10"> <td class="px-4 py-3">"Budget" vs. total cost ambiguity</td> <td class="px-4 py-3">Renamed to <strong>Budget/Person</strong></td> </tr> <tr class="border-t border-orange/10"> <td class="px-4 py-3">Group size unclear if creator counted</td> <td class="px-4 py-3">Added hint: <em>incl. yourself</em></td> </tr> <tr class="border-t border-orange/10"> <td class="px-4 py-3">Cancel/Edit only accessible from My Events</td> <td class="px-4 py-3">Added buttons directly on event detail page</td> </tr> <tr class="border-t border-orange/10"> <td class="px-4 py-3">Chat input field below keyboard</td> <td class="px-4 py-3">Repositioned above keyboard (standard mobile pattern)</td> </tr> <tr class="border-t border-orange/10"> <td class="px-4 py-3">Mute toggle had no visible feedback</td> <td class="px-4 py-3">Replaced with <strong>pinned notice</strong> at top of chatroom</td> </tr> <tr class="border-t border-orange/10"> <td class="px-4 py-3">Report reason locked after selection</td> <td class="px-4 py-3">Made reason editable before submission</td> </tr> </tbody> </table> </div> <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"> <figure> <img src="/images/palup/high_fi_homescreen.png" alt="High-fi — Home screen" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Home screen</figcaption> </figure> <figure> <img src="/images/palup/high_fi_create_event_details.png" alt="High-fi — Create Event details" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Create Event — details</figcaption> </figure> <figure> <img src="/images/palup/high_fi_create_event_preference_page.png" alt="High-fi — Create Event preference page" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Create Event — preferences</figcaption> </figure> <figure> <img src="/images/palup/high_fi_create_event_preview.png" alt="High-fi — Create Event preview" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Create Event — preview</figcaption> </figure> <figure> <img src="/images/palup/high_fi_create_event_posted.png" alt="High-fi — Event posted confirmation" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Event posted</figcaption> </figure> <figure> <img src="/images/palup/high_fi_my_events.png" alt="High-fi — My Events page" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">My Events</figcaption> </figure> <figure> <img src="/images/palup/high_fi_chatroom.png" alt="High-fi — Chatroom" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Chatroom</figcaption> </figure> <figure> <img src="/images/palup/high_fi_chatroom_pinned_notice.png" alt="High-fi — Chatroom with pinned notice" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Chatroom — pinned notice</figcaption> </figure> <figure> <img src="/images/palup/high_fi_profile_1.png" alt="High-fi — Profile page" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">Profile</figcaption> </figure> </div> </div> </section> <section data-testid="evaluation" id="evaluation" class="flex flex-col items-start justify-center py-20 lg:py-32"> <h2 class="mb-2 font-monospace text-2xl text-orange lg:text-4xl">Evaluation</h2> <span class="mb-8 h-1 w-10 bg-orange"></span> <p class="mb-6 max-w-2xl text-lg text-black dark:text-white leading-relaxed">
+We conducted in-person user testing across two rounds — heuristic evaluation and think-aloud
+		sessions — with 4–5 participants each. All participants were new to the prototype.
+</p> <div class="mb-10 w-full"> <h3 class="mb-4 font-monospace text-lg font-bold text-black dark:text-white">
+Four task flows evaluated:
+</h3> <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4"> <div class="flex items-start gap-3 rounded-xl border border-orange/20 bg-white p-4 shadow dark:bg-black"> <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-orange text-sm font-bold text-white"> 1 </span> <p class="text-sm text-black dark:text-white">Log in and manage profile</p> </div><div class="flex items-start gap-3 rounded-xl border border-orange/20 bg-white p-4 shadow dark:bg-black"> <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-orange text-sm font-bold text-white"> 2 </span> <p class="text-sm text-black dark:text-white">Find and join a dining event</p> </div><div class="flex items-start gap-3 rounded-xl border border-orange/20 bg-white p-4 shadow dark:bg-black"> <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-orange text-sm font-bold text-white"> 3 </span> <p class="text-sm text-black dark:text-white">Create a dining event</p> </div><div class="flex items-start gap-3 rounded-xl border border-orange/20 bg-white p-4 shadow dark:bg-black"> <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-orange text-sm font-bold text-white"> 4 </span> <p class="text-sm text-black dark:text-white">Communicate in a chatroom</p> </div> </div> </div> <h3 class="mb-4 font-monospace text-lg font-bold text-black dark:text-white">
+Notable findings:
+</h3> <ul class="mb-10 max-w-2xl list-disc space-y-3 pl-5 text-base text-black dark:text-white"> <li> <strong>Field label clarity</strong> was the most recurring friction point — small wording changes
+			(Budget/Person, Dining Atmosphere) had outsized impact on user confidence.
+</li> <li> <strong>Navigation consistency</strong> mattered: users expected the same action to be available
+			regardless of which screen they entered from.
+</li> <li>
+The <strong>chatroom pinned notice</strong> was well-received — participants said it reduced the
+			need to scroll up for key event details.
+</li> <li> <strong>Safety-related features</strong> (report flow, profile previews) were expected by participants
+			even when not prompted.
+</li> </ul> <div class="grid gap-4 sm:grid-cols-2"> <figure> <img src="/images/palup/high_fi_profile_2.png" alt="High-fi — Profile page with safety features" class="w-full rounded-xl shadow border border-gray-100" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">
+Profile — safety &amp; trust features
+</figcaption> </figure> <figure> <img src="/images/palup/paper_prototype_after_eval_join_event_2.jpg" alt="Paper prototype — Join event flow evaluation" class="w-full rounded-xl shadow" loading="lazy"> <figcaption class="mt-2 text-center text-xs text-black dark:text-white opacity-60">
+Join event — evaluation session
+</figcaption> </figure> </div> </section> <section data-testid="reflection" id="reflection" class="flex flex-col items-start justify-center py-20 lg:py-32"> <h2 class="mb-2 font-monospace text-2xl text-orange lg:text-4xl">Reflection</h2> <span class="mb-10 h-1 w-10 bg-orange"></span> <div class="mb-10 grid w-full gap-8 lg:grid-cols-3"> <div class="rounded-xl border border-orange/20 bg-white p-6 shadow dark:bg-black"> <p class="mb-3 font-bold text-orange">What worked</p> <p class="text-sm text-black dark:text-white leading-relaxed">
+Grounding design decisions in a specific, counterintuitive research finding — conversational
+				fit matters more than food preference — gave the team a clear north star. Every field label
+				and feature choice could be evaluated against that principle.
+</p> </div> <div class="rounded-xl border border-orange/20 bg-white p-6 shadow dark:bg-black"> <p class="mb-3 font-bold text-orange">What we'd do differently</p> <p class="text-sm text-black dark:text-white leading-relaxed">
+Our participant pool skewed toward Chinese international students, limiting generalizability.
+				A more diverse sample would have surfaced different safety concerns, dining norms, and social
+				dynamics. We'd also introduce quantitative usability metrics (SUS, task completion rates)
+				earlier.
+</p> </div> <div class="rounded-xl border border-orange/20 bg-white p-6 shadow dark:bg-black"> <p class="mb-3 font-bold text-orange">What's next</p> <p class="text-sm text-black dark:text-white leading-relaxed">
+A matching algorithm surfacing compatible companions, verified profiles to address safety
+				concerns, and an empty-state experience for newly created events with no joiners yet.
+</p> </div> </div> <div class="flex w-full flex-col items-center gap-6 rounded-2xl bg-orange/5 py-14 text-center dark:bg-orange/10"> <p class="text-xl font-semibold text-black dark:text-white">
+Ready to explore the full interactive prototype?
+</p> <a href="https://www.figma.com/proto/GHEjNtXC88rwqjANMyj82r/PalUp?node-id=628-2444&t=9MffpE68rPn1Mh8K-1" target="_blank" rel="noopener"> <button name="View Prototype" class="rounded-xl text-center transition focus-visible:ring-2 ring-offset-2 ring-orange px-6 py-3 bg-black text-white hover:bg-orange  border-2 border-transparent">View Interactive Prototype → </button> </a> </div> </section> <button data-testId="back-to-top-button" type="button" aria-label="back to top button" data-mdb-ripple="true" data-mdb-ripple-color="light" class="fixed bottom-5 right-5 inline-block rounded-full bg-black p-3 text-xs font-medium uppercase leading-tight shadow-md transition duration-150 ease-in-out hover:bg-orange hover:shadow-lg focus:outline-none focus:ring-0 dark:bg-orange dark:hover:bg-white dark:hover:text-black" id="btn-back-to-top"> <svg aria-hidden="true" focusable="false" data-prefix="fas" class="h-4 w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg> </button>  </main>  <footer data-testid="footer" class="p-6 text-center text-sm text-black dark:text-white"> <p>
+PalUp — UX Case Study &copy; 2026.
+		Team: Siyu (Zoey) Ai, Karena Ma, Suiyang Mai, Xinran Wang.
+		Made for <span class="text-orange">CS 5340 Human–Computer Interaction</span>.
+</p> </footer>  </body> </html>
