@@ -48,15 +48,121 @@ import Button from '@components/ui/Button.astro';
 		</a>
 	</div>
 
-	<!-- Phone mockup column -->
-	<div class="flex items-center justify-center lg:w-2/5">
-		<figure data-animate="fade-up" class="relative">
-			<img
-				src="/images/palup/high_fi_homescreen.png"
-				alt="PalUp high-fidelity homescreen"
-				class="animate-float w-[220px] rounded-[2.5rem] shadow-2xl ring-1 ring-black/10 dark:ring-white/10 lg:w-[260px]"
-				loading="eager"
-			/>
-		</figure>
+	<!-- Phone carousel column -->
+	<div data-animate="fade-up" class="flex flex-col items-center gap-4 lg:w-2/5">
+
+		<div class="flex items-center gap-4">
+
+			<!-- Prev arrow -->
+			<button
+				id="hero-prev"
+				aria-label="Previous screen"
+				disabled
+				class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-md text-gray-600 transition-all duration-200 hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-20 dark:bg-gray-800 dark:text-gray-300"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4">
+					<path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+				</svg>
+			</button>
+
+			<!--
+				Viewport = phone-width + 80px (40px peek each side).
+				overflow:hidden clips the track so adjacent screens peek through.
+				Individual slides are scaled/dimmed by JS to create depth.
+			-->
+			<div id="hero-viewport" class="animate-float relative w-[300px] overflow-hidden lg:w-[340px]">
+				<div id="hero-track" class="flex items-center">
+					<img src="/images/palup/high_fi_homescreen.png"  alt="Home"      class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="eager" />
+					<img src="/images/palup/high_fi_my_events.png"   alt="My Events" class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="lazy" />
+					<img src="/images/palup/high_fi_chatroom.png"    alt="Chatroom"  class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="lazy" />
+					<img src="/images/palup/high_fi_profile_1.png"   alt="Profile"   class="w-[220px] shrink-0 rounded-[2.5rem] lg:w-[260px]" loading="lazy" />
+				</div>
+			</div>
+
+			<!-- Next arrow -->
+			<button
+				id="hero-next"
+				aria-label="Next screen"
+				class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange text-white shadow-md transition-all duration-200 hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-20"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4">
+					<path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+				</svg>
+			</button>
+		</div>
+
+		<!-- Screen label -->
+		<p id="hero-label" class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Home</p>
+
+		<!-- Dot indicators -->
+		<div class="flex items-center gap-2">
+			<span class="hero-dot h-1.5 rounded-full bg-orange transition-all duration-300" style="width:1rem"></span>
+			<span class="hero-dot h-1.5 w-1.5 rounded-full bg-gray-300 transition-all duration-300 dark:bg-gray-600"></span>
+			<span class="hero-dot h-1.5 w-1.5 rounded-full bg-gray-300 transition-all duration-300 dark:bg-gray-600"></span>
+			<span class="hero-dot h-1.5 w-1.5 rounded-full bg-gray-300 transition-all duration-300 dark:bg-gray-600"></span>
+		</div>
 	</div>
 </section>
+
+<script>
+	const LABELS = ['Home', 'My Events', 'Chatroom', 'Profile'];
+	let idx = 0;
+
+	const viewport = document.getElementById('hero-viewport') as HTMLElement;
+	const track    = document.getElementById('hero-track')    as HTMLElement;
+	const prevBtn  = document.getElementById('hero-prev')     as HTMLButtonElement;
+	const nextBtn  = document.getElementById('hero-next')     as HTMLButtonElement;
+	const labelEl  = document.getElementById('hero-label')    as HTMLElement;
+	const dots     = Array.from(document.querySelectorAll<HTMLElement>('.hero-dot'));
+	const slides   = Array.from(track.children as HTMLCollectionOf<HTMLElement>);
+
+	// Spring easing: overshoots slightly for a lively "pop" feel
+	const SPRING = 'cubic-bezier(0.34, 1.56, 0.64, 1)';
+
+	track.style.transition = `transform 0.55s ${SPRING}`;
+	slides.forEach(s => {
+		s.style.transition = `transform 0.45s ${SPRING}, filter 0.3s ease, box-shadow 0.3s ease`;
+	});
+
+	function render() {
+		const vw   = viewport.offsetWidth;       // 300 or 340
+		const pw   = slides[0].offsetWidth;       // 220 or 260
+		const peek = (vw - pw) / 2;               // 40 — peek on each side
+
+		// Sync slide widths (handles responsive lg: difference)
+		slides.forEach(s => (s.style.width = pw + 'px'));
+		track.style.width = slides.length * pw + 'px';
+
+		// Center current slide in viewport with peek on both sides
+		track.style.transform = `translateX(${-(idx * pw) + peek}px)`;
+
+		// Scale + dim adjacent slides to create depth; current pops forward
+		slides.forEach((s, i) => {
+			const dist = Math.abs(i - idx);
+			if (dist === 0) {
+				s.style.transform  = 'scale(1)';
+				s.style.filter     = 'brightness(1)';
+				s.style.boxShadow  = '0 24px 48px rgba(0,0,0,0.22)';
+			} else {
+				s.style.transform  = 'scale(0.84)';
+				s.style.filter     = 'brightness(0.65)';
+				s.style.boxShadow  = 'none';
+			}
+		});
+
+		prevBtn.disabled = idx === 0;
+		nextBtn.disabled = idx === LABELS.length - 1;
+
+		labelEl.textContent = LABELS[idx];
+
+		dots.forEach((d, i) => {
+			d.style.width           = i === idx ? '1rem' : '0.375rem';
+			d.style.backgroundColor = i === idx ? '#E06330' : '';
+		});
+	}
+
+	prevBtn.addEventListener('click', () => { if (idx > 0)                  { idx--; render(); } });
+	nextBtn.addEventListener('click', () => { if (idx < LABELS.length - 1)  { idx++; render(); } });
+
+	render();
+</script>
