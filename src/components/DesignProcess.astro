@@ -21,40 +21,122 @@ const img = (name: string): ImageMetadata =>
 		finding from research or evaluation.
 	</p>
 
-	<!-- Process timeline (custom diagram) -->
-	<div class="mb-10 rounded-2xl bg-gray-50 p-6 dark:bg-gray-900 lg:p-8">
-		<div class="relative py-2">
-			<!-- Connector line: 4 nodes, each w-1/4, center of col = 12.5%, circle radius = 1.75rem -->
-			<div class="absolute top-[1.75rem] left-[calc(12.5%+1.75rem)] right-[calc(12.5%+1.75rem)] h-0.5 bg-gray-300 dark:bg-gray-600"></div>
-			<!-- Phase nodes -->
-			<div class="relative flex justify-between">
-				<div data-animate="scale-in" data-delay="0" class="flex w-1/4 flex-col items-center">
-					<div class="z-10 flex h-14 w-14 items-center justify-center rounded-full bg-orange text-sm font-bold text-white shadow-md">01</div>
-					<p class="mt-3 text-center text-sm font-bold text-black dark:text-white">Paper Prototype</p>
-					<p class="text-center text-xs text-gray-400">12 issues found</p>
-					<p class="text-center text-xs text-gray-400">Feb 2026</p>
-				</div>
-				<div data-animate="scale-in" data-delay="150" class="flex w-1/4 flex-col items-center">
-					<div class="z-10 flex h-14 w-14 items-center justify-center rounded-full bg-orange text-sm font-bold text-white shadow-md">02</div>
-					<p class="mt-3 text-center text-sm font-bold text-black dark:text-white">Wireframes</p>
-					<p class="text-center text-xs text-gray-400">Low fidelity</p>
-					<p class="text-center text-xs text-gray-400">Feb 2026</p>
-				</div>
-				<div data-animate="scale-in" data-delay="300" class="flex w-1/4 flex-col items-center">
-					<div class="z-10 flex h-14 w-14 items-center justify-center rounded-full bg-orange text-sm font-bold text-white shadow-md">03</div>
-					<p class="mt-3 text-center text-sm font-bold text-black dark:text-white">Medium-Fi</p>
-					<p class="text-center text-xs text-gray-400">User testing</p>
-					<p class="text-center text-xs text-gray-400">Mar 2026</p>
-				</div>
-				<div data-animate="scale-in" data-delay="450" class="flex w-1/4 flex-col items-center">
-					<div class="z-10 flex h-14 w-14 items-center justify-center rounded-full bg-orange text-sm font-bold text-white shadow-md">04</div>
-					<p class="mt-3 text-center text-sm font-bold text-black dark:text-white">High-Fi</p>
-					<p class="text-center text-xs text-gray-400">Final prototype</p>
-					<p class="text-center text-xs text-gray-400">Apr 2026</p>
-				</div>
-			</div>
-		</div>
+	<!-- Process timeline — fidelity curve -->
+	<div id="fidelity-chart" class="mb-10">
+		<svg viewBox="0 0 560 230" class="w-full" aria-hidden="true">
+			<!-- Y axis -->
+			<line x1="36" y1="10" x2="36" y2="168" stroke="#d1d5db" stroke-width="1"/>
+			<polygon points="36,6 32,14 40,14" fill="#d1d5db"/>
+			<!-- X axis -->
+			<line x1="36" y1="168" x2="548" y2="168" stroke="#d1d5db" stroke-width="1"/>
+			<polygon points="552,168 544,164 544,172" fill="#d1d5db"/>
+			<!-- Axis labels -->
+			<text x="42" y="13" font-size="8" fill="#9ca3af" font-family="ui-monospace,monospace" letter-spacing="1">FIDELITY</text>
+			<text x="510" y="184" font-size="8" fill="#9ca3af" font-family="ui-monospace,monospace" letter-spacing="1">TIME</text>
+
+			<!-- Dashed drop lines -->
+			<line class="drop drop-1" x1="90"  y1="110" x2="90"  y2="168" stroke="#f97316" stroke-width="1" stroke-dasharray="3,3"/>
+			<line class="drop drop-2" x1="222" y1="96"  x2="222" y2="168" stroke="#f97316" stroke-width="1" stroke-dasharray="3,3"/>
+			<line class="drop drop-3" x1="354" y1="60"  x2="354" y2="168" stroke="#f97316" stroke-width="1" stroke-dasharray="3,3"/>
+			<line class="drop drop-4" x1="486" y1="22"  x2="486" y2="168" stroke="#f97316" stroke-width="1" stroke-dasharray="3,3"/>
+
+			<!-- Bezier curve -->
+			<path class="curve-line"
+			      d="M 90,110 C 156,110 156,96 222,96 C 288,96 288,60 354,60 C 420,60 420,22 486,22"
+			      fill="none" stroke="#f97316" stroke-width="2.5" stroke-linecap="round"/>
+
+			<!-- Nodes -->
+			<g class="node node-1"><circle cx="90"  cy="110" r="22" fill="#f97316"/><text x="90"  y="115" text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="ui-monospace,monospace">01</text></g>
+			<g class="node node-2"><circle cx="222" cy="96"  r="22" fill="#f97316"/><text x="222" y="101" text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="ui-monospace,monospace">02</text></g>
+			<g class="node node-3"><circle cx="354" cy="60"  r="22" fill="#f97316"/><text x="354" y="65"  text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="ui-monospace,monospace">03</text></g>
+			<g class="node node-4"><circle cx="486" cy="22"  r="22" fill="#f97316"/><text x="486" y="27"  text-anchor="middle" font-size="11" font-weight="bold" fill="white" font-family="ui-monospace,monospace">04</text></g>
+
+			<!-- Phase labels (inside SVG, centered on node x) -->
+			<g class="label label-1">
+				<text x="90"  y="184" text-anchor="middle" font-size="8.5" font-weight="bold" font-family="ui-sans-serif,sans-serif" class="label-title">Paper Prototype</text>
+				<text x="90"  y="195" text-anchor="middle" font-size="7.5" font-family="ui-sans-serif,sans-serif" fill="#9ca3af">12 issues found</text>
+				<text x="90"  y="205" text-anchor="middle" font-size="7.5" font-family="ui-sans-serif,sans-serif" fill="#9ca3af">Feb 2026</text>
+			</g>
+			<g class="label label-2">
+				<text x="222" y="184" text-anchor="middle" font-size="8.5" font-weight="bold" font-family="ui-sans-serif,sans-serif" class="label-title">Wireframes</text>
+				<text x="222" y="195" text-anchor="middle" font-size="7.5" font-family="ui-sans-serif,sans-serif" fill="#9ca3af">Low fidelity</text>
+				<text x="222" y="205" text-anchor="middle" font-size="7.5" font-family="ui-sans-serif,sans-serif" fill="#9ca3af">Feb 2026</text>
+			</g>
+			<g class="label label-3">
+				<text x="354" y="184" text-anchor="middle" font-size="8.5" font-weight="bold" font-family="ui-sans-serif,sans-serif" class="label-title">Medium-Fi</text>
+				<text x="354" y="195" text-anchor="middle" font-size="7.5" font-family="ui-sans-serif,sans-serif" fill="#9ca3af">User testing</text>
+				<text x="354" y="205" text-anchor="middle" font-size="7.5" font-family="ui-sans-serif,sans-serif" fill="#9ca3af">Mar 2026</text>
+			</g>
+			<g class="label label-4">
+				<text x="486" y="184" text-anchor="middle" font-size="8.5" font-weight="bold" font-family="ui-sans-serif,sans-serif" class="label-title">High-Fi</text>
+				<text x="486" y="195" text-anchor="middle" font-size="7.5" font-family="ui-sans-serif,sans-serif" fill="#9ca3af">Final prototype</text>
+				<text x="486" y="205" text-anchor="middle" font-size="7.5" font-family="ui-sans-serif,sans-serif" fill="#9ca3af">Apr 2026</text>
+			</g>
+		</svg>
 	</div>
+
+	<style>
+		/* Curve draw-on */
+		#fidelity-chart .curve-line {
+			stroke-dasharray: 620;
+			stroke-dashoffset: 620;
+			transition: stroke-dashoffset 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+		}
+		#fidelity-chart.in-view .curve-line { stroke-dashoffset: 0; }
+
+		/* Drop lines */
+		#fidelity-chart .drop { opacity: 0; transition: opacity 0.4s ease; }
+		#fidelity-chart.in-view .drop-1 { opacity: 0.35; transition-delay: 0.75s; }
+		#fidelity-chart.in-view .drop-2 { opacity: 0.35; transition-delay: 0.95s; }
+		#fidelity-chart.in-view .drop-3 { opacity: 0.35; transition-delay: 1.15s; }
+		#fidelity-chart.in-view .drop-4 { opacity: 0.35; transition-delay: 1.35s; }
+
+		/* Node scale-in */
+		#fidelity-chart .node {
+			transform-box: fill-box;
+			transform-origin: center;
+			opacity: 0;
+			transform: scale(0.2);
+			transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+		}
+		#fidelity-chart.in-view .node-1 { opacity: 1; transform: scale(1); transition-delay: 0.7s; }
+		#fidelity-chart.in-view .node-2 { opacity: 1; transform: scale(1); transition-delay: 0.9s; }
+		#fidelity-chart.in-view .node-3 { opacity: 1; transform: scale(1); transition-delay: 1.1s; }
+		#fidelity-chart.in-view .node-4 { opacity: 1; transform: scale(1); transition-delay: 1.3s; }
+
+		/* Label text color */
+		#fidelity-chart .label-title { fill: #111827; }
+		:global(.dark) #fidelity-chart .label-title { fill: #f3f4f6; }
+
+		/* Labels fade in */
+		#fidelity-chart .label { opacity: 0; transition: opacity 0.4s ease; }
+		#fidelity-chart.in-view .label-1 { opacity: 1; transition-delay: 0.75s; }
+		#fidelity-chart.in-view .label-2 { opacity: 1; transition-delay: 0.95s; }
+		#fidelity-chart.in-view .label-3 { opacity: 1; transition-delay: 1.15s; }
+		#fidelity-chart.in-view .label-4 { opacity: 1; transition-delay: 1.35s; }
+
+		@media (prefers-reduced-motion: reduce) {
+			#fidelity-chart .curve-line,
+			#fidelity-chart .drop,
+			#fidelity-chart .node,
+			#fidelity-chart .label { transition: none !important; }
+			#fidelity-chart.in-view .curve-line { stroke-dashoffset: 0; }
+			#fidelity-chart.in-view .drop,
+			#fidelity-chart.in-view .node,
+			#fidelity-chart.in-view .label { opacity: 1; }
+		}
+	</style>
+
+	<script>
+		const chart = document.getElementById('fidelity-chart');
+		if (chart) {
+			const obs = new IntersectionObserver(
+				([e]) => { if (e.isIntersecting) chart.classList.add('in-view'); else chart.classList.remove('in-view'); },
+				{ threshold: 0.25 }
+			);
+			obs.observe(chart);
+		}
+	</script>
 
 	<!-- ─── Phase 01 ─── -->
 	<div class="mb-10">
