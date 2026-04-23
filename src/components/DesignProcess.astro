@@ -64,20 +64,32 @@ const img = (name: string): ImageMetadata =>
 		</div>
 
 		<div class="rounded-2xl bg-gray-50 p-6 dark:bg-gray-900 lg:p-10">
+		<p class="mb-4 text-2xl font-bold text-black dark:text-white">12 <span class="text-base font-normal text-gray-500">issues found</span></p>
 		<div class="mb-6 grid gap-6 lg:grid-cols-2 lg:gap-10">
+			<!-- Left: task flows -->
 			<div>
-				<p class="mb-3 text-2xl font-bold text-black dark:text-white">12 <span class="text-base font-normal text-gray-500">issues found</span></p>
-				<p class="text-sm leading-loose text-gray-600 dark:text-gray-400">
-					We sketched four core task flows. A cross-team heuristic evaluation surfaced 12 issues, three rated most severe:
-				</p>
+				<p class="mb-3 text-sm font-medium text-gray-700 dark:text-gray-300">We sketched 4 core task flows:</p>
+				<div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+					<p class="mb-2 text-xs font-bold uppercase tracking-widest text-orange">Task Flows</p>
+					<ul class="space-y-2 text-xs text-gray-600 dark:text-gray-400">
+						<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>Managing a profile</li>
+						<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>Finding and joining an event</li>
+						<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>Creating an event</li>
+						<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>Chatting with participants</li>
+					</ul>
+				</div>
 			</div>
-			<div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-				<p class="mb-2 text-xs font-bold uppercase tracking-widest text-orange">Critical</p>
-				<ul class="space-y-2 text-xs text-gray-600 dark:text-gray-400">
-					<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>No send button visible in chat</li>
-					<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>No way to leave a chatroom</li>
-					<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>Event creation and home browsing shared the same screen</li>
-				</ul>
+			<!-- Right: critical issues -->
+			<div>
+				<p class="mb-3 text-sm font-medium text-gray-700 dark:text-gray-300">A cross-team heuristic evaluation surfaced 12 issues, three rated most severe:</p>
+				<div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+					<p class="mb-2 text-xs font-bold uppercase tracking-widest text-orange">Critical</p>
+					<ul class="space-y-2 text-xs text-gray-600 dark:text-gray-400">
+						<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>No send button visible in chat</li>
+						<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>No way to leave a chatroom</li>
+						<li class="flex gap-2"><span class="flex-shrink-0 font-bold text-orange">→</span>Event creation and home browsing shared the same screen</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 
@@ -232,6 +244,8 @@ const img = (name: string): ImageMetadata =>
 			<h3 class="font-monospace text-xl font-bold text-black dark:text-white lg:text-2xl">High-Fidelity Prototype</h3>
 		</div>
 		<div class="rounded-2xl bg-gray-50 p-6 dark:bg-gray-900 lg:p-10">
+		<p class="mb-1 text-sm leading-loose text-gray-600 dark:text-gray-400">A second round of testing and expert critique pushed the design further.</p>
+		<p class="mb-6 text-2xl font-bold text-black dark:text-white">6 <span class="text-base font-normal text-gray-500">key changes</span></p>
 
 		<!-- Changes table -->
 		<div class="mb-8 overflow-x-auto rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
