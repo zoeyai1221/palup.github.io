@@ -34,7 +34,7 @@
 	</div>
 
 	<!-- Round 1 -->
-	<div class="mb-8">
+	<div class="mb-10">
 		<div class="mb-4 flex items-center gap-3">
 			<div class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-orange text-xs font-bold text-white">1</div>
 			<div>
@@ -42,51 +42,56 @@
 				<h3 class="font-monospace text-lg font-bold text-black dark:text-white">Heuristic Evaluation + User Testing</h3>
 			</div>
 		</div>
-		<p class="mb-3 text-xs leading-relaxed text-gray-500">
+		<p class="mb-4 text-xs leading-relaxed text-gray-500">
 			Evaluated on the wireframe / medium-fidelity prototype using Nielsen's heuristics.
 		</p>
-		<div class="overflow-x-auto rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
-			<table class="w-full text-xs">
-				<thead>
-					<tr class="border-b border-gray-200 dark:border-gray-700">
-						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Task</th>
-						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Issue</th>
-						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Recommendation</th>
-					</tr>
-				</thead>
-				<tbody class="divide-y divide-gray-100 dark:divide-gray-800">
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Create an event</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">After creating, event card on Home tab was not tappable — users had to navigate to My Events. <em>Violates: Consistency and Standards.</em></td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">All event cards made tappable, linking to event detail page from any screen.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Create an event</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">"Vibe" label and options (Quiet / Casual / Deep) too abstract. <em>Violates: Match Between System and Real World.</em></td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Renamed to "Dining Atmosphere"; options: Quiet Meal / Casual Hangout / Deep Conversation.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Find and join an event</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Participant avatars looked clickable but did nothing — users expected profile info on tap.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Made avatars clickable to display participant profile details.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Find and join an event</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Keyboard did not appear automatically when tapping the search bar.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Keyboard now appears immediately on search bar tap.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Communicate in chatroom</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Toggling "Mute Notifications" had no visible change. <em>Violates: Visibility of System Status.</em></td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Added pinned notice at top of chatroom showing key event info for all participants.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Login &amp; manage profile</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Error message on failed login not visually prominent — easy to overlook. <em>Violates: Visibility of System Status.</em></td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Redesigned with stronger contrast and clearer placement.</td>
-					</tr>
-				</tbody>
-			</table>
+		<div class="flex flex-col divide-y divide-gray-100 rounded-xl border border-gray-100 bg-white dark:divide-gray-800 dark:border-gray-800 dark:bg-gray-900">
+			<div class="hidden grid-cols-2 gap-6 border-b border-gray-100 px-4 py-2.5 dark:border-gray-800 lg:grid">
+				<p class="text-xs font-bold uppercase tracking-widest text-orange">Task &amp; Issue</p>
+				<p class="text-xs font-bold uppercase tracking-widest text-orange">Fix</p>
+			</div>
+			<div data-animate="fade-up" data-delay="0" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Create an event</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Event card on Home tab was not tappable after creating — users had to navigate to My Events.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ All event cards made tappable, linking to the event detail page from any screen.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="60" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Create an event</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">"Vibe" label and options (Quiet / Casual / Deep) too abstract to understand quickly.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Renamed to "Dining Atmosphere"; options: Quiet Meal / Casual Hangout / Deep Conversation.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="120" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Find and join an event</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Participant avatars looked clickable but did nothing — users expected profile info on tap.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Avatars now open participant profile details on tap.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="180" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Find and join an event</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Keyboard did not appear automatically when tapping the search bar.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Keyboard now appears immediately on search bar tap.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="240" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Communicate in chatroom</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Toggling "Mute Notifications" had no visible change — users couldn't tell if it worked.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Added pinned notice showing key event info at top of chatroom.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="300" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Login &amp; manage profile</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Error message on failed login not visually prominent — easy to overlook.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Redesigned with stronger contrast and clearer placement.</p>
+			</div>
 		</div>
 	</div>
 
@@ -99,87 +104,95 @@
 				<h3 class="font-monospace text-lg font-bold text-black dark:text-white">Heuristic Evaluation + User Testing</h3>
 			</div>
 		</div>
-		<p class="mb-3 text-xs leading-relaxed text-gray-500">
+		<p class="mb-4 text-xs leading-relaxed text-gray-500">
 			Evaluated on the high-fidelity prototype. Heuristic evaluation surfaced structural issues; think-aloud sessions with 4–5 new participants followed.
 		</p>
 
-		<p class="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">Heuristic Evaluation</p>
-		<div class="mb-4 overflow-x-auto rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
-			<table class="w-full text-xs">
-				<thead>
-					<tr class="border-b border-gray-200 dark:border-gray-700">
-						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Task</th>
-						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Issue</th>
-						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Recommendation</th>
-					</tr>
-				</thead>
-				<tbody class="divide-y divide-gray-100 dark:divide-gray-800">
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Cancel and Edit Event</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Users entering from Home had no way to cancel or edit — had to go to My Events. Limits flexibility of use.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Added Cancel and Edit buttons directly on the event detail page regardless of entry point.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">View Event details</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Only a small "›" button was tappable. Conflicts with proximity principle.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Retained "›" as visual cue but expanded entire event card as the tappable area.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Communicate in chatroom — send message</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Chat input field positioned beneath keyboard, deviating from standard mobile patterns.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Input field repositioned directly above keyboard.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Newly established chatroom — edge case</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">No empty state design for a new chatroom with no messages or participants yet.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Added empty chatroom state to represent real post-creation scenarios.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Login &amp; manage profile</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Login &amp; Security screen had no entry point for help or support.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Added Help &amp; Support button on the Login &amp; Security page.</td>
-					</tr>
-				</tbody>
-			</table>
+		<p class="mb-3 text-xs font-bold uppercase tracking-widest text-gray-400">Heuristic Evaluation</p>
+		<div class="mb-8 flex flex-col divide-y divide-gray-100 rounded-xl border border-gray-100 bg-white dark:divide-gray-800 dark:border-gray-800 dark:bg-gray-900">
+			<div class="hidden grid-cols-2 gap-6 border-b border-gray-100 px-4 py-2.5 dark:border-gray-800 lg:grid">
+				<p class="text-xs font-bold uppercase tracking-widest text-orange">Task &amp; Issue</p>
+				<p class="text-xs font-bold uppercase tracking-widest text-orange">Fix</p>
+			</div>
+			<div data-animate="fade-up" data-delay="0" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Cancel and Edit Event</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Users entering from Home had no way to cancel or edit — had to go to My Events.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Cancel and Edit buttons added to event detail page regardless of entry point.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="60" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">View Event details</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Only a small "›" button was tappable — conflicts with the proximity principle.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Entire event card is now the tappable area.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="120" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Chatroom — send message</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Chat input field positioned beneath keyboard, deviating from standard mobile patterns.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Input field repositioned directly above keyboard.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="180" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Chatroom — edge case</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">No empty state design for a newly created chatroom with no messages or participants yet.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Added empty chatroom state for post-creation scenarios.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="240" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Login &amp; manage profile</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Login &amp; Security screen had no entry point for help or support.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Added Help &amp; Support button on the Login &amp; Security page.</p>
+			</div>
 		</div>
 
-		<p class="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">User Testing</p>
-		<div class="overflow-x-auto rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
-			<table class="w-full text-xs">
-				<thead>
-					<tr class="border-b border-gray-200 dark:border-gray-700">
-						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Task</th>
-						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Issue</th>
-						<th class="px-4 py-2.5 text-left font-bold uppercase tracking-widest text-orange">Recommendation</th>
-					</tr>
-				</thead>
-				<tbody class="divide-y divide-gray-100 dark:divide-gray-800">
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Create Event — preferences</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">"Budget" ambiguous (total vs. per-person?). "Group Size" unclear if creator counted.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Renamed to "Budget/Person"; added hint "incl. yourself" to Group Size.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Communicate in chatroom — report user</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Once a report reason was selected, users couldn't modify it without restarting.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Users can now change selected reason before submission.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Communicate in chatroom — view user</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Could tap others' avatars but NOT "You" to view own profile — had to navigate away.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Tapping "You" now opens own profile preview from within the chatroom.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">Login &amp; manage profile</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Confirmation screens lacked polish — hard to recognise completed actions.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Redesigned with clearer card layout and subtle highlight background.</td>
-					</tr>
-					<tr>
-						<td class="px-4 py-3 font-medium text-black dark:text-white">View Participants / User Profile</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Only part of participant list was clickable; avatars missing from list.</td>
-						<td class="px-4 py-3 text-gray-600 dark:text-gray-400">Added avatars for all participants; made every participant clickable.</td>
-					</tr>
-				</tbody>
-			</table>
+		<p class="mb-3 text-xs font-bold uppercase tracking-widest text-gray-400">User Testing</p>
+		<div class="flex flex-col divide-y divide-gray-100 rounded-xl border border-gray-100 bg-white dark:divide-gray-800 dark:border-gray-800 dark:bg-gray-900">
+			<div class="hidden grid-cols-2 gap-6 border-b border-gray-100 px-4 py-2.5 dark:border-gray-800 lg:grid">
+				<p class="text-xs font-bold uppercase tracking-widest text-orange">Task &amp; Issue</p>
+				<p class="text-xs font-bold uppercase tracking-widest text-orange">Fix</p>
+			</div>
+			<div data-animate="fade-up" data-delay="0" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Create Event — preferences</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">"Budget" ambiguous (total vs. per-person?). "Group Size" unclear if creator was counted.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Renamed to "Budget/Person"; added "incl. yourself" hint to Group Size.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="60" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Chatroom — report user</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Once a report reason was selected, users couldn't modify it without restarting the flow.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Users can now change selected reason before submission.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="120" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Chatroom — view user</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Could tap others' avatars but not "You" to view own profile — had to navigate away.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Tapping "You" now opens own profile preview from within the chatroom.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="180" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">Login &amp; manage profile</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Confirmation screens lacked polish — hard to recognise completed actions at a glance.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Redesigned with clearer card layout and subtle highlight background.</p>
+			</div>
+			<div data-animate="fade-up" data-delay="240" class="grid gap-3 p-4 lg:grid-cols-2 lg:gap-6">
+				<div>
+					<p class="mb-1.5 text-xs font-bold uppercase tracking-widest text-gray-400">View Participants / User Profile</p>
+					<p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">Only part of the participant list was clickable; avatars were missing from the list.</p>
+				</div>
+				<p class="text-xs leading-relaxed text-orange">→ Added avatars for all participants; every row now clickable.</p>
+			</div>
 		</div>
 	</div>
+
+</section>
